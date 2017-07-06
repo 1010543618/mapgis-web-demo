@@ -1,3 +1,6 @@
+body{
+	overflow-x: hidden;
+}
 .om-layer-icon{
 	display: inline-block;
 	width: 16px;

@@ -5,21 +5,6 @@ define([], function(){
       window.OM_OL_MAP.baseLayer.clearGrid();
       window.OM_OL_MAP.baseLayer.redraw();
   }
-  om_tool.removePopup = function() {
-    om_tool.removeTip(); //移除提示
-    if (flashLayer != null) {
-      flashLayer.removeAllFeatures();    //清空闪烁图层要素
-    }
-    if (queryPopupArr) {
-      var len = queryPopupArr.length;
-      for (var i = 0; i < len; i++) {
-          if (queryPopupArr[i]) {
-              OM_OL_MAP.removePopup(queryPopupArr[i]);
-          }
-      }
-      queryPopupArr = null;
-    }
-  }
   //提示
   om_tool.tip = function(info) {
       if ($("#toolTip").length > 0) {
@@ -36,7 +21,6 @@ define([], function(){
         $("#toolTip").remove();
     }
   }
-
   //关闭全部tabs
   om_tool.euCloseAllTabs = function(tabs_selecter){
     //删除tab后tabs.length的长度会变
@@ -49,15 +33,17 @@ define([], function(){
       $(tabs_selecter).tabs('close', titles[i]); 
     }
   }
-  
   om_tool.reset = function() {
+    om_tool.removeTip();//移除提示
+    // 地图事件
+    OM_OL_MAP.events.unregister("click", null, window.OL_EVENTS.query);
     // 缩放控件
     if (typeof OL_C_ZOOMBOX != 'undefined') {
         OL_C_ZOOMBOX.destroy();
         $('#om_map').css('cursor', 'default');
     }
     // 绘图控件
-    if (typeof OL_C_ZOOMBOX != 'undefined') {
+    if (typeof OL_CONTROL_DF != 'undefined') {
       OL_CONTROL_DF.destroy();
     }
   }
@@ -71,8 +57,21 @@ define([], function(){
         $("#toolTip").remove();
     }
   }
-  
-  
+  om_tool.removePopup = function() {
+    om_tool.removeTip(); //移除提示
+    if (flashLayer != null) {
+      flashLayer.removeAllFeatures();    //清空闪烁图层要素
+    }
+    if (queryPopupArr) {
+      var len = queryPopupArr.length;
+      for (var i = 0; i < len; i++) {
+          if (queryPopupArr[i]) {
+              OM_OL_MAP.removePopup(queryPopupArr[i]);
+          }
+      }
+      queryPopupArr = null;
+    }
+  }
   
   return (window.om_tool = om_tool);
 });
@@ -85,47 +84,38 @@ function startFlash() {
     if (timer != null) {
         clearInterval(timer); //清除计时器 
     }
-    timer = setInterval(toggleLayer, 500); //设置切换图层可见性的计时器 
-}
-//清除放大缩小状态
-function clearZoom() {
-    if (zoombox != null) {
-        zoombox.deactivate();
-        $("#om_map").css("cursor", "default");
-    }
+    timer = setInterval(function() {
+        if (flashLayer_query != null) {
+            if (flashLayer_query.visibility) {
+                flashLayer_query.setVisibility(false); //隐藏闪烁要素图层 
+            }
+            else {
+                flashLayer_query.setVisibility(true); //显示闪烁要素图层 
+            }
+        }
+    }, 500); //设置切换图层可见性的计时器 
 }
 
 //闪烁但是不移动
-function flashOneFeatrueNoPan(jsonObj) {
-    if (flashLayer == null || jsonObj == null) {
-        return;
-    }
-    else {
-        flashLayer.removeAllFeatures();
-    }
-    if (jsonObj.SFEleArray == null || jsonObj.SFEleArray.length <= 0) {
-        return;
-    }
-    else {
-        var format = new Zondy.Format.PolygonJSON();
-        var features = format.read(jsonObj); //解析 JSON 对象 
-        flashLayer.setVisibility(true); //设置图层可见 
-        flashLayer.addFeatures(features); //将要素添加到图层中
-    }
-    startFlash(); //闪烁要素 
-}
+// om_tool.flashOneFeatrueNoPan(jsonObj) {
+//     if (flashLayer == null || jsonObj == null) {
+//         return;
+//     }else {
+//         flashLayer.removeAllFeatures();
+//     }
+//     if (jsonObj.SFEleArray == null || jsonObj.SFEleArray.length <= 0) {
+//         return;
+//     }else {
+//         var format = new Zondy.Format.PolygonJSON();
+//         var features = format.read(jsonObj); //解析 JSON 对象 
+//         flashLayer.setVisibility(true); //设置图层可见 
+//         flashLayer.addFeatures(features); //将要素添加到图层中
+//     }
+//     startFlash(); //闪烁要素 
+// }
 
 //切换图层的可见属性，实现闪烁效果 
-function toggleLayer() {
-    if (flashLayer_query != null) {
-        if (flashLayer_query.visibility) {
-            flashLayer_query.setVisibility(false); //隐藏闪烁要素图层 
-        }
-        else {
-            flashLayer_query.setVisibility(true); //显示闪烁要素图层 
-        }
-    }
-}
+
 
 
 //-------------------------------------------------------------条件查询-----------------------------------------------------------

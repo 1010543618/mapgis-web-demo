@@ -4,61 +4,15 @@ define([
   'jquery.easyui.ribbon',
   'jquery.smartresize',
   'jquery.browser',
-  'OpenLayers',
+  'openlayers',
+  'om-openlayers',
   'openlayers.magnifyingglass',
-  'openlayers.NestFramedCloud',
   'zdclient',
   'zdclient.zdcontrol',
   'iziModal',
   'om_layer'
   ], function(){
   var om_init = new Object;
-  om_init.init_map = function(){
-      //地图漫游
-      var mapPan = new OpenLayers.Control.TouchNavigation({
-          dragPanOptions: {//惯性滑动
-              enableKinetic: true
-          }
-      });
-      OM_OL_MAP.addControl(mapPan);
-      //鼠标滚动特效
-      var glassUpDown = new OpenLayers.Control.MagnifyingGlass();
-      OM_OL_MAP.addControl(glassUpDown);
-      overViewMap = new Zondy.Control.OverviewMap();
-      OM_OL_MAP.addControl(overViewMap);
-      OM_OL_MAP.addControl(new OpenLayers.Control.PanZoomBar());
-      OM_OL_MAP.setCenter(new OpenLayers.LonLat(430307, 4351021), 1);
-
-      //替换图片url（通过php的入口进入找不到）
-      $('#om_map img').each(function(){//img
-          var src = $(this).attr('src');
-          src.split('/')[0] == 'img' && $(this).attr('src', BASE_URL+'node_modules/mapgis/'+src);
-      });
-      $('#om_map div').each(function(){//background-image
-          if ($(this).attr('style').match(/url\("(.*?)"\)/)) {
-              var url = $(this).attr('style').match(/url\("(.*?)"\)/)[1];
-              if (url.search('http://')) {
-                  $(this).css('background-image', 'url('+BASE_URL+'node_modules/mapgis/'+url+')');
-              }
-          }
-      });
-      
-      //固定地图大小
-      var height = $(window).height() - $("#mapgis-ribbon").offset().top - $("#mapgis-ribbon").height() - 8;
-      $("#om_map,#om_map_layer").height(height);
-      $('#om_map').bind("contextmenu",function(e){
-        e.preventDefault();
-        $('#om_map-menu').menu().menu('show', {
-          left: e.pageX,
-          top: e.pageY
-        });
-      });
-
-      $(window).smartresize(function(){  
-          var height = $(window).height() - $("#om-ribbon").offset().top - $("#om-ribbon").height() - 8;
-          $("#om_map,#om_map_layer").height(height);
-      });
-  }
   om_init.init_ribbon = function() {
     var om_ribbon_data = {
         selected:0, //默认第几个是选择的
@@ -276,6 +230,38 @@ define([
         }
       }
     });
+  }
+  om_init.init_map = function(){
+      //地图漫游
+      var mapPan = new OpenLayers.Control.TouchNavigation({
+          dragPanOptions: {//惯性滑动
+              enableKinetic: true
+          }
+      });
+      OM_OL_MAP.addControl(mapPan);
+      //鼠标滚动特效
+      var glassUpDown = new OpenLayers.Control.MagnifyingGlass();
+      OM_OL_MAP.addControl(glassUpDown);
+      overViewMap = new Zondy.Control.OverviewMap();
+      OM_OL_MAP.addControl(overViewMap);
+      OM_OL_MAP.addControl(new OpenLayers.Control.PanZoomBar());
+      OM_OL_MAP.setCenter(new OpenLayers.LonLat(430307, 4351021), 1);
+      
+      //固定地图大小
+      var height = $(window).height() - $("#mapgis-ribbon").offset().top - $("#mapgis-ribbon").height() - 8;
+      $("#om_map,#om_map_layer").height(height);
+      $('#om_map').bind("contextmenu",function(e){
+        e.preventDefault();
+        $('#om_map-menu').menu().menu('show', {
+          left: e.pageX,
+          top: e.pageY
+        });
+      });
+      // #mapgis-ribbon生成后调节#om_map,#om_map_layer高度
+      $(window).smartresize(function(){  
+          var height = $(window).height() - $("#mapgis-ribbon").offset().top - $("#mapgis-ribbon").height() - 8;
+          $("#om_map,#om_map_layer").height(height);
+      });
   }
   om_init.init_map_layer = function(layers) { //初始化图层列表
     var branch1 = new Object();

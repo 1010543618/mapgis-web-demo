@@ -1,9 +1,9 @@
 define([
   'jquery',
   'jquery.browser',
-  'OpenLayers',
+  'openlayers',
+  'om-openlayers',
   'openlayers.magnifyingglass',
-  'openlayers.NestFramedCloud',
   'zdclient',
   'zdclient.zdcontrol',
   'om_tool'

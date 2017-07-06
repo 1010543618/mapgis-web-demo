@@ -7,9 +7,9 @@ requirejs.config({
         'jquery.easyui':'node_modules/demo-jquery-easyui/jquery.easyui.min',
         'jquery.easyui.ribbon':'node_modules/demo-jquery-easyui-ribbon/jquery.ribbon',
         'jquery.browser':'node_modules/mapgis/jquery.browser',
-        'OpenLayers':'node_modules/mapgis/openlayers',
+        'openlayers':'node_modules/mapgis/openlayers',
+        'om-openlayers':'js/om-openlayers',
         'openlayers.magnifyingglass':'node_modules/mapgis/openlayers-magnifyingglass',
-        'openlayers.NestFramedCloud':'node_modules/mapgis/NestFramedCloud',
         'zdclient':'node_modules/mapgis/zdclient',
         'zdclient.zdcontrol':'node_modules/mapgis/zdcontrol',
         'iziModal':'node_modules/iziModal/js/iziModal.min',
@@ -32,9 +32,8 @@ requirejs.config({
         'jquery.easyui' : ['jquery'],
         'jquery.easyui.ribbon' : ['jquery','jquery.easyui'],
         'iziModal':['jquery'],
-        'openlayers.magnifyingglass' : ['OpenLayers'],
-        'openlayers.NestFramedCloud' : ['OpenLayers'],
-        'zdclient' : ['jquery.browser','OpenLayers'],
+        'openlayers.magnifyingglass' : ['openlayers'],
+        'zdclient' : ['jquery.browser','openlayers'],
         'zdclient.zdcontrol' : ['zdclient'],
         'om_init' : [
           'jquery',
@@ -42,9 +41,8 @@ requirejs.config({
           'jquery.easyui.ribbon',
           'jquery.smartresize',
           'jquery.browser',
-          'OpenLayers',
+          'openlayers',
           'openlayers.magnifyingglass',
-          'openlayers.NestFramedCloud',
           'zdclient',
           'zdclient.zdcontrol',
           'iziModal',
@@ -73,6 +71,7 @@ requirejs(['om_init'],function () {
         SrcLayer: "gdbp://MapGisLocal/" + mapSqlName + "/ds/gxgl_set/sfcls/", //空间分析Url
         clipSourceSet: "gdbp://MapGisLocal/" + mapSqlName + "/ds/clip/sfcls/"//裁剪分析Url
     };
+    window.OL_EVENTS = {};
     window.OM_OL_MAP = new OpenLayers.Map('om_map', { numZoomLevels: 10, maxExtent: OM_CONFIG.mapBound, maxResolution: OM_CONFIG.resolution,
         //当前地图采用坐标系（墨卡托坐标）            
         projection: "EPSG:900913",
@@ -91,8 +90,8 @@ requirejs(['om_init'],function () {
       window.MAP_LAYERS['edit_layers'] = [];
       om_init.init_map_layer(layers);
     }, true, true);
-    om_init.init_map();
     om_init.init_ribbon();
+    om_init.init_map();
     // om_init.init_login();
     // om_init.init_iziModal();
     // //init OM_QUERY_WINDOW
