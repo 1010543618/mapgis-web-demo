@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- Meta, title, CSS, favicons, etc. -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>国土规划一张图</title>
+	<!-- Bootstrap -->
+	<link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link href="./node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<!-- iziModal -->
+	<link href="./node_modules/iziModal/css/iziModal.min.css" rel="stylesheet">
+	<link href="./css/user-module.css" rel="stylesheet">
+	<!-- jquery-confirm -->
+	<link href="./node_modules/jquery-confirm/dist/jquery-confirm.min.css" rel="stylesheet">
+	<!-- jquery-easyui -->
+	<link rel="stylesheet" type="text/css" href="./node_modules/demo-jquery-easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="./node_modules/demo-jquery-easyui/themes/icon.css">
+	<!-- jquery-easyui-ribbon -->
+	<link rel="stylesheet" type="text/css" href="./node_modules/demo-jquery-easyui-ribbon/ribbon.css">
+	<link rel="stylesheet" type="text/css" href="./node_modules/demo-jquery-easyui-ribbon/ribbon-icon.css">
+	<link rel="stylesheet" type="text/css" href="./node_modules/demo-jquery-easyui-ribbon/mapgis-demo/mapgis-ribbon-icon.css">
+	<!-- mapgis -->
+	<link rel="stylesheet" type="text/css" href="./node_modules/mapgis/zondy-style-thin.css">
+	<link rel="stylesheet" type="text/css" href="./css/om_main.css">
+	<!-- requirejs -->
+	<script>
+		var BASE_URL = "./";
+		var SITE_URL = "./";
+	</script>
+	<script data-main="./js/main.js" src="./node_modules/requirejs/require.js"></script>
+</head>
+<body>
+	<!-- nav -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dt-navbar-collapse" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">
+		        <img alt="Brand" src="./img/brand.png">
+		      </a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="dt-navbar-collapse">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="<?=site_url()?>">国土规划一张图<span class="sr-only">(current)</span></a></li>
+		      </ul>
+		      
+<?php if (isset($_SESSION['user'])): ?>
+						<p class="user_p navbar-text navbar-right">
+	            <i class="user_i">您好：<?=$_SESSION['user']['user_name']?></i>&nbsp;
+	            <i onclick="UserModule.logout()" class="user_i logout_i">注销</i>
+            </p>
+            <style>
+            	.user_p{
+            		padding-right: 20px;
+            	}
+              .user_i{
+                font-style:normal;
+              }
+              .logout_i{
+                cursor: pointer;
+                color: #00A2E8;
+              }
+              .logout_i:hover{
+                color: #99D9EA;
+              }
+            </style>
+<?php else: ?>
+					<form class="navbar-form navbar-right">
+            <button onclick="UserModule.open('login')" type="button" class="btn btn-success">登录</button>
+		        <button onclick="UserModule.open('regist')" type="button" class="btn btn-info">注册</button>
+		      </form>
+<?php endif ?>
+		    </div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	<!-- /nav -->
+	<!-- main-container -->
+	<div class="map-container container-fluid">
+		<div class="row">
+			<!-- 工具条 -->
+		    <div id="mapgis-ribbon" style="width:100%"></div>
+		    <!-- /工具条 -->
+		    <!-- 地图 -->
+		    <div class="om_map-wrap show-layer">
+		    	<div id="om_map_layer">
+    		        <ul id="om_map_layer-tree"></ul>
+		            <div id="om_map_layer-menu" style="width:120px;display: none;">
+				    	<div data-options="iconCls:'fa fa-eye'">显示</div>
+				    	<div data-options="iconCls:'fa fa-eye-slash'">隐藏</div>
+				    	<div data-options="iconCls:'fa fa-search'">查询</div>
+				    	<div data-options="iconCls:'fa fa-pencil'">编辑</div>
+				    	<div data-options="iconCls:'fa fa-table'">查看属性表</div>
+				    </div>
+		    	</div>
+		    	<div id="om_map"></div>
+		    	<div id="om_map-menu" style="width:120px;display: none;">
+			    	<div onclick="om_func.zoom_in()" data-options="iconCls:'icon-zoom-in icon-small'">放大</div>
+			    	<div onclick="om_func.zoom_out()" data-options="iconCls:'icon-zoom-out icon-small'">缩小</div>
+			    	<div onclick="om_func.move()" data-options="iconCls:'icon-move icon-small'">移动</div>
+			    	<div onclick="om_func.update()" data-options="iconCls:'icon-update icon-small'">复位</div>
+			    	<div onclick="om_func.reset()" data-options="iconCls:'icon-reset icon-small'">更新</div>
+			    	<div onclick="om_func.zoom_extends()" data-options="iconCls:'icon-zoom-extends icon-small'">复位</div>
+			    	<div onclick="alert('正在开发。。。')">地图信息</div>
+			    </div>
+		    </div>
+		    <!-- /地图 -->
+	    </div>
+	</div>
+	<!-- /main-container -->
+	<!-- footer -->
+	<footer class="bottom-footer">
+		<div class="container">
+			 <p>
+			 	Copyright &copy; 2018-2022 阜新市国土规划一张图
+			 </p>
+			 <p>
+			 	联系电话：XXXX-XXXXXXX 邮政编码：123000 访问量统计：XXXXXXXXXX  
+			 </p>
+		</div>
+	</footer>
+	<!-- /footer -->
+	<!-- other -->
+	<div id="om-query-window" title="查询结果" style="width:600px;height:400px;"
+      data-options="iconCls:'fa fa-search om-layer-icon',modal:true,closed:true">
+      <div id="om-query-tabs"></div>
+  </div>
+  <div id="om-input-query-condition-window" title="条件查询" data-options="iconCls:'icon-condition-query icon-small'" style="width:300px;height:370px;padding:10px;display:none;">
+		<div>
+			<div style=" text-align:center; margin-bottom:10px;">
+				<span style="display: inline-block;width:100px;font-size:12px;">请选择查询图层：</span>
+				<select id="iqc-layer" style=" width:150px" name="">
+					<option value="-1">===请选择===</option>
+				</select>
+			</div>
+			<div style=" text-align:center; margin-bottom:10px;">
+				<span style="display: inline-block;width:100px;font-size:12px;">请选择属性字段：</span>
+				<select id="iqc-attr-col" name="" style=" width:150px">
+					<option value="-1">===请选择===</option>
+				</select>
+			</div>
+			<div style=" text-align:center;">
+				<button class="iqc-operator" value="+" style="width:60px; height:25px;" type="button">+</button>
+				<button class="iqc-operator" value="-" style="width:60px; height:25px;" type="button">-</button>
+				<button class="iqc-operator" value="*" style="width:60px; height:25px;" type="button">*</button>
+				<button class="iqc-operator" value="/" style="width:60px; height:25px;" type="button">/</button>
+			</div>
+			<div style=" text-align:center;">
+				<button class="iqc-operator" value=">=" style="width:60px; height:25px;" type="button">>=</button>
+				<button class="iqc-operator" value="<="  style="width:60px; height:25px;" type="button"><=</button>
+				<button class="iqc-operator" value=">"  style="width:60px; height:25px;" type="button">></button>
+				<button class="iqc-operator" value="<"  style="width:60px; height:25px;" type="button"><</button>
+			</div>
+			<div style=" text-align:center;">
+				<button class="iqc-operator" value="=" style="width:60px; height:25px;" type="button">=</button>
+				<button class="iqc-operator" value="!="  style="width:60px; height:25px;" type="button">!=</button>
+				<button class="iqc-operator" value="and"  style="width:60px; height:25px;" type="button">and</button>
+				<button class="iqc-operator" value="or"  style="width:60px; height:25px;" type="button">or</button>
+			</div>
+			<div style=" text-align:center;margin-bottom:10px;">
+				<button class="iqc-operator" value="not"  style="width:60px; height:25px;" type="button">not</button>
+				<button class="iqc-operator" value="like" style="width:60px; height:25px;" type="button">like</button>
+				<button class="iqc-operator" value="is null" style="width:60px; height:25px;" type="button">is null</button>
+				<button class="iqc-operator" value="%"  style="width:60px; height:25px;" type="button">%</button>
+			</div>
+			<div style="text-align:center; margin-bottom:10px;">
+				<span style=" width:250px;font-size:12px;">&nbsp;&nbsp;请输入查询条件：例如: ID>='0'</span>
+			</div>
+			<div style=" text-align:center; margin-bottom:10px;">
+				<textarea id="iqc-text" cols="6" rows="3" style="width:250px; height:60px; resize:none;"></textarea>
+			</div>
+			<div style=" text-align:center; margin-bottom:10px;">
+				<button id="iqc-query" style="margin-left:5px; margin-right:5px; width:70px; height:25px;" type="button">查询</button>
+				<button id="iqc-text-clear" style="margin-left:5px; margin-right:5px;width:70px; height:25px;" type="button">清空</button>
+				<button id="iqc-exit" style="margin-left:5px; margin-right:5px;width:70px; height:25px;" type="button">关闭</button>
+			</div>
+		</div>
+	</div>
+	<div id="om-path-anaylse-window" title="路径分析" data-options="iconCls:'icon-path-analysis icon-small'" style="width:300px;height:180px;padding:20px;display:none;">
+		<div style="height:25px; padding-top:2px;text-align:center;">
+			<span style="font-size:10px;">起点：</span>
+			<select id="om-path-anaylse-start-select" style=" width:130px;height:22px; "></select>
+			<img alt="" src="./node_modules/mapgis/img/roadAnalysisA.png" style="width:22px; height:22px;cursor:pointer;"  title="在地图上标注起点位置" onclick="startAddress();"/>
+		</div>
+		<div style="height:25px;padding-top:2px;text-align:center;">
+			<span style="font-size:10px;">终点：</span>
+			<select id="om-path-anaylse-end-select" style=" width:130px;height:22px;"></select>
+			<img alt="" src="./node_modules/mapgis/img/roadAnalysisB.png" onclick="endAddress();"  style="width:22px; height:22px;cursor:pointer;" title="在地图上标注终点位置"   />
+		</div>
+		<div style="height:35px; text-align:center; padding-top:10px;">
+			<button id="om-startPathAnaylse" style="cursor:pointer; font-size:10px;height:25px; width:80px; border-style:none; border:1px solid #9999ff; background-color:#fff; ">开始分析</button>
+			<button style="cursor:pointer; font-size:10px;height:25px; width:80px; border-style:none; border:1px solid #9999ff; background-color:#fff; ">清除结果</button>
+		</div>
+	</div>
+	<div id="om-topology-anaylse-window" title="拓扑分析" data-options="iconCls:'icon-topology-analysis icon-small'" style="width:230px;height:100px;padding:20px;display:none;">
+		<button id="om-ta-select" style="cursor:pointer; font-size:10px;height:25px; width:80px; border-style:none; border:1px solid #9999ff; background-color:#fff;">选择要素</button>
+		&nbsp;&nbsp;
+		<button id="om-ta-start" style="cursor:pointer; font-size:10px;height:25px; width:80px; border-style:none; border:1px solid #9999ff; background-color:#fff;">开始分析</button>
+	</div>
+</body>
+</html>

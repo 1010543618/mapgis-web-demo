@@ -1,0 +1,143 @@
+.om-layer-icon{
+	display: inline-block;
+	width: 16px;
+	height: 18px;
+	vertical-align: top;
+	overflow: hidden;
+	background: none;
+}
+
+
+
+#om_map{
+	width: calc(100% - 230px);
+	height:500px;
+	border: 1px solid #000;
+	margin-left: 230px;
+	/*background:url(../img/big_bg.jpg);
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-color: #fff;*/
+}
+#om_map_layer{
+	float: left;
+	width:230px;
+	height:500px;
+	border: 1px solid #000;
+}
+/*----------container----------*/
+.map-container:before{
+	content: "";
+	height: 50px;
+}
+/*----------login----------*/
+.btn-disabled{
+    cursor: not-allowed !important;
+    filter: alpha(opacity=50);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .50;
+}
+.btn-disabled:hover{
+	filter: alpha(opacity=50) !important;
+	opacity: .50 !important;
+}
+.my-form-group{
+	position: relative;
+}
+.my-form-group .msg{
+	position: absolute;
+	padding-right: 5px;
+	top: 0px;
+	right: 0px;
+	height: 52px;
+	line-height: 52px;
+	color: #a94442;
+	font-size: 16px;
+	text-align: right;
+}
+
+/*----------carousel----------*/
+.my-carousel-img{
+	width: 100%;
+}
+
+/*----------panel----------*/
+.announcement-panel{
+	margin: 0;
+}
+.sections-panel {
+	margin: 10px 0 0;
+} 
+.sections-panel .panel-body{
+	margin: 10px 0 0;
+	padding: 0 10px;
+} 
+.section-panel {
+	margin: 10px -15px;
+}
+.blogroll-panel {
+	margin: 10px 0 0;
+}
+.blogroll-div{
+	margin-bottom: 10px;
+}
+
+
+/*----------footer----------*/
+footer.bottom-footer{
+	padding: 20px;
+	margin-top: 10px;
+	background: #D9EDF7;
+	text-align: center;
+	font-size: 0.8rem;;
+}
+footer.bottom-footer p:first-child{
+	padding-bottom: 10px;
+}
+
+
+
+
+/* 小屏幕（平板，大于等于 768px） */
+@media (min-width: 768px) {
+	.announcement-panel .list-group-item{
+		font-size:.7rem;
+		padding: 5px 10px;
+		height: calc(150px / 6);
+	}
+	.announcement-panel .list-group-item .badge{
+		font-size:.7rem;
+	}
+}
+
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media (min-width: 992px) {
+	.announcement-panel .list-group-item{
+		font-size:.8rem;
+		padding: 8px 10px;
+		height: calc(208px / 6);
+	}
+	.announcement-panel .list-group-item .badge{
+		font-size:.8rem;
+	}
+	.section-panel {
+	  margin: 10px -5px;
+	}
+}
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media (min-width: 1200px) {
+	.announcement-panel .list-group-item{
+		font-size:1rem;
+		padding: 9px 10px;
+		height: calc(255px / 6);
+	}
+	.announcement-panel .list-group-item .badge{
+		font-size:1rem;
+	}
+	.section-panel {
+	  margin: 0px -10px 10px -10px;
+	}
+}

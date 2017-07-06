@@ -1,0 +1,22 @@
+{
+  "name": "mapgis-web-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "demo-jquery-easyui": "^1.0.0",
+    "demo-jquery-easyui-ribbon": "^1.0.0",
+    "font-awesome": "^4.7.0",
+    "izimodal": "^1.4.2",
+    "jquery": "^3.2.1",
+    "jquery-confirm": "^3.2.3",
+    "requirejs": "^2.3.3",
+    "store-js": "^2.0.4"
+  }
+}

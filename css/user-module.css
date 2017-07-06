@@ -1,0 +1,169 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*----------login----------*/
+.btn-disabled{
+    cursor: not-allowed !important;
+    filter: alpha(opacity=50);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .50;
+}
+.btn-disabled:hover{
+    filter: alpha(opacity=50) !important;
+    opacity: .50 !important;
+}
+.my-form-group{
+    position: relative;
+}
+.my-form-group .msg{
+    position: absolute;
+    padding-right: 5px;
+    top: 0px;
+    right: 0px;
+    height: 52px;
+    line-height: 52px;
+    color: #a94442;
+    font-size: 16px;
+    text-align: right;
+}
+
+
+.iziModal .iziModal-content p{
+  margin-bottom: 10px;
+}
+
+#modal-welcome, #modal-alert{
+  background: rgba(255,255,255,0.1);
+}
+
+#modal-iframe{
+  border-bottom-color: black !important;
+  background: black;
+}
+
+#user-modal a,a:hover{
+  text-decoration: none;
+}
+
+#user-modal .iziModal-content header{
+    background: #eee;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 3px 3px 0 0;
+    width: 100%;
+}
+
+#user-modal .iziModal-content header a{
+    display: block;
+    float: left;
+    width: 50%;
+    padding: 0;
+    text-align: center;
+    background: #ddd;
+    color: #999;
+    height: 65px;
+    vertical-align: middle;
+    line-height: 65px;
+    font-family: 'Lato', arial;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+ 
+#user-modal .iziModal-content header a:not(.active):hover{
+  box-shadow: inset 0 -10px 20px -10px #aaa
+} 
+
+#user-modal .iziModal-content header a.active{
+    background: #fff;
+    color: #777;
+}
+
+#user-modal .iziModal-content .sections{
+  overflow: hidden;
+}
+
+#user-modal .iziModal-content section{
+    padding: 30px;
+}
+
+#user-modal .iziModal-content section input:not([type="checkbox"]), #user-modal .iziModal-content section button{
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    margin-bottom: 26px;
+    padding: 15px;
+    font-size: 14px;
+}
+
+#user-modal .iziModal-content section button{
+  height: 46px;
+  padding: 0;
+}
+
+#user-modal .iziModal-content section input:focus{
+    border-color:#28CA97;
+}
+
+#user-modal .iziModal-content section label[for="check"]{
+    margin-bottom: 26px;
+    font-size: 14px;
+    color: #999;
+    display: block;
+}
+
+#user-modal .iziModal-content section footer{
+    overflow: hidden;
+}
+
+#user-modal .iziModal-content section button{
+    background: #28CA97;
+    color: white;
+    margin: 0;
+    border: 0;
+    cursor: pointer;
+    width: 50%;
+    float: left;
+}
+
+#user-modal .iziModal-content section button:hover{
+    opacity: 0.8;
+}
+
+#user-modal .iziModal-content section button:nth-child(1){
+    border-radius: 3px 0 0 3px;
+}
+
+#user-modal .iziModal-content section button:nth-child(2){
+    border-radius: 0 3px 3px 0;
+    background: #aaa;
+}
+
+#user-modal .iziModal-content .icon-close{
+    background: #FFF;
+    margin-bottom: 10px;
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 0;
+    color: #a9a9a9;
+    cursor: pointer;
+}
+
+#user-modal .iziModal-content .icon-close:hover, #user-modal .iziModal-content .icon-close:focus{
+  color: black;
+}
+
+.iziModal .iziModal-header-title{
+  font-family: 'Lato', arial;
+  font-weight: 500;
+}
+
