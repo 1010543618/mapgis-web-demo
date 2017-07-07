@@ -188,16 +188,16 @@
 		<div style="height:25px; padding-top:2px;text-align:center;">
 			<span style="font-size:10px;">起点：</span>
 			<select id="om-path-anaylse-start-select" style=" width:130px;height:22px; "></select>
-			<img alt="" src="./node_modules/mapgis/img/roadAnalysisA.png" style="width:22px; height:22px;cursor:pointer;"  title="在地图上标注起点位置" onclick="startAddress();"/>
+			<img onclick="om_analysis.set_path_analysisA()" src="./node_modules/mapgis/img/roadAnalysisA.png" style="width:22px; height:22px;cursor:pointer;"  title="在地图上标注起点位置"/>
 		</div>
 		<div style="height:25px;padding-top:2px;text-align:center;">
 			<span style="font-size:10px;">终点：</span>
 			<select id="om-path-anaylse-end-select" style=" width:130px;height:22px;"></select>
-			<img alt="" src="./node_modules/mapgis/img/roadAnalysisB.png" onclick="endAddress();"  style="width:22px; height:22px;cursor:pointer;" title="在地图上标注终点位置"   />
+			<img onclick="om_analysis.set_path_analysisB()" src="./node_modules/mapgis/img/roadAnalysisB.png" style="width:22px; height:22px;cursor:pointer;" title="在地图上标注终点位置"   />
 		</div>
 		<div style="height:35px; text-align:center; padding-top:10px;">
 			<button id="om-startPathAnaylse" style="cursor:pointer; font-size:10px;height:25px; width:80px; border-style:none; border:1px solid #9999ff; background-color:#fff; ">开始分析</button>
-			<button style="cursor:pointer; font-size:10px;height:25px; width:80px; border-style:none; border:1px solid #9999ff; background-color:#fff; ">清除结果</button>
+			<button onclick="om_analysis.clear_path_analysis()" style="cursor:pointer; font-size:10px;height:25px; width:80px; border-style:none; border:1px solid #9999ff; background-color:#fff; ">清除结果</button>
 		</div>
 	</div>
 	<div id="om-topology-anaylse-window" title="拓扑分析" data-options="iconCls:'icon-topology-analysis icon-small'" style="width:230px;height:100px;padding:20px;display:none;">

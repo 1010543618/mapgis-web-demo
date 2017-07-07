@@ -100,12 +100,13 @@ define([
             },{
                 title:'高级查询',
                 tools:[{
-                    name:"om_func.condition_query()",
+                    name:"om_query.condition_query()",
                     text:'条件查询',
                     iconCls:'icon-condition-query icon-large',
                     iconAlign:'top',
                     size:'large'
                 },{
+                    name:"om_query.district_query()",
                     text:'按行政区查询',
                     iconCls:'icon-district-query icon-large',
                     iconAlign:'top',
@@ -117,12 +118,6 @@ define([
             groups:[{
                 title:'分析',
                 tools:[{
-                    name:"om_analysis.profile_analysis()",
-                    text:'剖面分析',
-                    iconCls:'icon-profile-analysis icon-large',
-                    iconAlign:'top',
-                    size:'large'
-                },{
                     name:"om_analysis.path_analysis()",
                     text:'路径分析',
                     iconCls:'icon-path-analysis icon-large',

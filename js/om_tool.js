@@ -37,6 +37,23 @@ define([], function(){
     om_tool.removeTip();//移除提示
     // 地图事件
     OM_OL_MAP.events.unregister("click", null, window.OL_EVENTS.query);
+    
+    // 向量图层
+    if (typeof OL_L_Vector != 'undefined') {
+      OL_L_Vector.destroy();
+    }
+    // 标注图层
+    if (typeof OL_L_MARKERS != 'undefined') {
+        OL_L_MARKERS.destroy();
+    }
+    // 绘制控件
+    if (typeof OL_C_DRAWFEATURE != 'undefined') {
+        OL_C_DRAWFEATURE.destroy();
+    }
+    // 测量控件
+    if (typeof ZD_C_MEASURE != 'undefined') {
+        ZD_C_MEASURE.destroy();
+    }
     // 缩放控件
     if (typeof OL_C_ZOOMBOX != 'undefined') {
         OL_C_ZOOMBOX.destroy();

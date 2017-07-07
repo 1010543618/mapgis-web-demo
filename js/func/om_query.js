@@ -98,6 +98,101 @@ define([
       OM_OL_MAP.events.register("click", null, window.OL_EVENTS.query);
       om_tool.tip("左键点击地图要素查询属性");
   }
+  //名称
+  om_query.name_query  = function(){
+    alert('开发中');
+  }
+  //条件
+  om_query.condition_query = function(){
+    var $input_window = $('#om-input-query-condition-window');
+    var $iqc_layer = $input_window.find('#iqc-layer');
+    var $iqc_attr_col = $input_window.find('#iqc-attr-col');
+    var $iqc_operator_btns = $input_window.find('.iqc-operator');
+    var $iqc_text = $input_window.find('#iqc-text');
+    var $iqc_query = $input_window.find('#iqc-query');
+    var $iqc_text_clear = $input_window.find('#iqc-text-clear');
+    var $iqc_exit = $input_window.find('#iqc-exit');
+    var init_input_codition_window = function(){
+      // 初始化选择图层
+      $iqc_layer.change(function(){
+        var layer_index = $iqc_layer.val();
+        if (layer_index != -1) {
+          var queryStruct = new Zondy.Service.QueryFeatureStruct(); //初始化查询结构对象 
+          queryStruct.IncludeGeometry = false; //设置查询结构不包含几何信息 
+          var queryParam = new Zondy.Service.QueryParameter({ resultFormat: "json", struct: queryStruct}); //初始化查询参数对象 
+          queryParam.recordNumber = 0; //设置查询要素数目
+          var queryService = new Zondy.Service.QueryDocFeature(queryParam, OM_CONFIG.mapName, layer_index, { ip: OM_CONFIG.ip, port: OM_CONFIG.port }); //实例化地图文档查询服务对象 
+          queryService.query(function(feature){
+            // 初始化选择图层属性数据
+            $iqc_attr_col.html("<option value='-1'>===请选择===</option>");
+            for (var i = 0; i < feature.AttStruct.FldName.length; i++) {
+              $iqc_attr_col.append('<option value='+feature.AttStruct.FldName[i]+'>'+feature.AttStruct.FldName[i]+'</option>');
+            }
+          }); //查询并回调
+        }else{
+          $iqc_attr_col.html("<option value='-1'>===请选择===</option>");
+        }
+      });
+      window.ZD_S_C_MAPDOC.getMapInfo(function(layer){
+        for (var i = 0; i < layer["subLayerNames"].length; i++) {
+            $iqc_layer.append('<option value='+i+'>'+layer["subLayerNames"][i]+'</option>');
+        }
+      }, true, true);
+      // 初始化选择图层属性change
+      $iqc_attr_col.change(function(){
+        if ($iqc_attr_col.val() != -1) {
+          $iqc_text.val($iqc_attr_col.val());
+        }
+      });
+      // 初始化运算符按钮
+      $iqc_operator_btns.click(function(){
+        $iqc_text.val($iqc_text.val()+' '+$(this).val());
+      });
+      // 初始化清空查询按钮
+      $iqc_text_clear.click(function(){
+        $iqc_text.val('');
+      });
+      // 初始化退出按钮
+      $iqc_exit.click(function(){
+        $input_window.window('close');
+      });
+    }
+    // 1.初始并弹出化获取条件框
+    $iqc_layer.html("<option value='-1'>===请选择===</option>");
+    $iqc_attr_col.html("<option value='-1'>===请选择===</option>");
+    init_input_codition_window();
+    $input_window.window({'onClose':function(){
+      $iqc_text.val('');
+      $input_window.find('*').unbind();
+    }});
+    // 2.进行查询
+    $iqc_query.click(function(){
+      var layer_index = $iqc_layer.val();
+      if (layer_index != -1) {
+        var queryStruct = new Zondy.Service.QueryFeatureStruct();
+        queryStruct.IncludeGeometry = true;
+        var queryParam = new Zondy.Service.QueryParameter({ resultFormat: "json", struct: queryStruct });
+        queryParam.where = $iqc_text.val();
+        queryParam.recordNumber = 10000;
+        var queryService = new Zondy.Service.QueryDocFeature(queryParam, OM_CONFIG.mapName, layer_index, { ip: OM_CONFIG.ip, port: OM_CONFIG.port });
+        // 清空原有标签
+        om_tool.euCloseAllTabs("#om-query-tabs");
+        queryService.query(function(query_result){
+          var layer_index = this.layerIndex;
+          var layer_name = MAP_LAYERS["subLayerNames"][layer_index].toString();
+          $("#om-query-window").window('open');
+          addDataToQueryWindow(layer_index,layer_name,query_result);
+        });
+      }else {
+        $.messager.alert('警告','请选择条件查询图层！');
+      }
+    });
+  }
+  //行政区
+  om_query.district_query  = function(){
+    alert('开发中');
+  }
+
   function simple_query(tip, handler, geomObj){
     if (window.MAP_LAYERS['query_layers'].length == 0) {
       $.messager.alert('注意','您尚未激活查询图层,请激活查询后再次执行操作！');
@@ -196,87 +291,5 @@ define([
     });
   };
 
-  //   else if (type == 'line') {//画线
-  //       om_tool.tip("");
-  //       controlType = 2;
-  //       if (OL_CONTROL_DF != null) {
-  //           OL_CONTROL_DF.deactivate();
-  //       }
-  //       OL_CONTROL_DF = new OpenLayers.Control.DrawFeature(geomLayer, OpenLayers.Handler.Path);
-  //   }
-  //   else if (type == 'circle') {//画圆
-  //       om_tool.tip("在地图上绘制圆进行查询");
-  //       controlType = 3;
-  //       if (OL_CONTROL_DF != null) {
-  //           OL_CONTROL_DF.deactivate();
-  //       }
-  //       OL_CONTROL_DF = new OpenLayers.Control.DrawFeature(geomLayer, OpenLayers.Handler.RegularPolygon);
-  //       OL_CONTROL_DF.handler.setOptions({ sides: 40 });
-  //   }
-  //   else if (type == 'rectangle') {//画矩形
-  //       om_tool.tip("在地图上拉框进行查询");
-  //       controlType = 4;
-  //       if (OL_CONTROL_DF != null) {
-  //           OL_CONTROL_DF.deactivate();
-  //       }
-  //       OL_CONTROL_DF = new OpenLayers.Control.DrawFeature(geomLayer, OpenLayers.Handler.RegularPolygon);
-  //   }
-  //   else if (type == 'polygon') {// 创建画多边形
-  //       om_tool.tip("在地图上绘制多边形进行查询");
-  //       controlType = 5;
-  //       if (OL_CONTROL_DF != null) {
-  //           OL_CONTROL_DF.deactivate();
-  //       }
-  //       OL_CONTROL_DF = new OpenLayers.Control.DrawFeature(geomLayer, OpenLayers.Handler.Polygon);
-  //   }
-    
-  //   //回调函数
-  //   function callback(feature){
-      
-  //     var geomObj;
-  //     if (controlType == 1) {
-          
-  //     }else if (controlType == 2) {
-  //         geomObj = new Zondy.Object.PolyLineForQuery(); //初始化几何线对象 
-  //         geomObj.setByOL(feature.geometry); //接收客户端绘制的线对象 
-  //         geomObj.nearDis = 10;
-  //     }
-  //     else if (controlType == 3) {
-  //         geomObj = new Zondy.Object.Circle(); //初始化几何圆对象 
-  //         geomObj.setByOL(feature.geometry); //接收客户端绘制的圆对象 
-  //     }
-  //     else if (controlType == 4) {
-  //         geomObj = new Zondy.Object.Rectangle(); //初始化几何矩形对象 
-  //         geomObj.setByOL(feature.geometry); //接收客户端绘制的矩形对象 
-  //     }
-  //     else if (controlType == 5) {
-  //         geomObj = new Zondy.Object.Polygon(); //初始化几何多边形对象 
-  //         geomObj.setByOL(feature.geometry); //接收客户端绘制的多边形对象 
-  //         geomObj.nearDis = 0.001;
-  //     }
-  //     feature.destroy();
-  //     var queryStruct = new Zondy.Service.QueryFeatureStruct(); //初始化查询结构对象 
-  //     queryStruct.IncludeGeometry = true; //设置查询结构包含几何信息
-  //     var queryParam = new Zondy.Service.QueryParameter({ geometry: geomObj, resultFormat: "json", struct: queryStruct }); //实例化查询参数对象 
-  //     queryParam.recordNumber = 10000; //设置查询要素数目
-  //     //判断是否有要查询的图层
-  //     if (QUERY_LAYERS.length == 0) {
-  //       $.messager.alert('注意','您尚未激活查询图层,请激活查询后再次执行操作！');
-  //     }else{
-  //       // 清空历史
-  //       for (var i = QUERY_LAYERS.length - 1; i >= 0; i--) {
-  //         ZONDY_SERVICE_QDF = new Zondy.Service.QueryDocFeature(queryParam, OM_CONFIG.mapName, QUERY_LAYERS[i], { ip: OM_CONFIG.ip, port: OM_CONFIG.port });
-  //         //查询并且展示数据
-  //         ZONDY_SERVICE_QDF.query(function(query_result){
-  //           var layer_index = this.layerIndex;
-  //           var layer_name = MAP_LAYER["subLayerNames"][layer_index].toString();
-  //           om_tool.addDataToQueryWindow(layer_index,layer_name,query_result);
-  //         });
-  //       }
-  //       $(OM_QUERY_WINDOW).window('open');
-  //     }
-  //   }
-  //   if (OL_CONTROL_DF) { OL_CONTROL_DF.activate(); }
-  // }
   return (window.om_query = om_query);
 });

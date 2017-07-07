@@ -18,10 +18,10 @@ requirejs.config({
         'user_module':'js/user-module',
         'om_init':'js/om_init',
         'om_tool':'js/om_tool',
-        'om_func':'js/om_func',
         'om_layer':'js/func/om_layer',
         'om_base':'js/func/om_base',
         'om_query':'js/func/om_query',
+        'om_analysis':'js/func/om_analysis',
     },
     shim: {
         'store':{
@@ -46,7 +46,6 @@ requirejs.config({
           'zdclient',
           'zdclient.zdcontrol',
           'iziModal',
-          'om_func',
           'om_tool'
           ],
     }
