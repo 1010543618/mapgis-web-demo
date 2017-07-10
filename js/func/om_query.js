@@ -202,19 +202,19 @@ define([
     //创建绘图层
     OL_LAYER_V = new OpenLayers.Layer.Vector();
     window.OM_OL_MAP.addLayer(OL_LAYER_V);
-    OL_CONTROL_DF = new OpenLayers.Control.DrawFeature(OL_LAYER_V, handler);
+    OL_C_DRAWFEATURE = new OpenLayers.Control.DrawFeature(OL_LAYER_V, handler);
     if (geomObj.getGeometryType() === 'Circle') {
       // 圆查询要加这个
-      OL_CONTROL_DF.handler.setOptions({ sides: 40 });
+      OL_C_DRAWFEATURE.handler.setOptions({ sides: 40 });
     }
     // 添加查询回调函数，进行查询
     // 清空历史
     om_tool.euCloseAllTabs("#om-query-tabs");
-    OL_CONTROL_DF.featureAdded = function(feature){
-      OL_CONTROL_DF.deactivate();
+    OL_C_DRAWFEATURE.featureAdded = function(feature){
+      OL_C_DRAWFEATURE.deactivate();
       om_tool.removeTip();
       geomObj.setByOL(feature.geometry); //接收客户端绘制的线对象 
-      OM_OL_MAP.addControl(OL_CONTROL_DF);
+      OM_OL_MAP.addControl(OL_C_DRAWFEATURE);
       feature.destroy();
       var queryStruct = new Zondy.Service.QueryFeatureStruct(); //初始化查询结构对象 
       queryStruct.IncludeGeometry = true; //设置查询结构包含几何信息
@@ -233,8 +233,8 @@ define([
       // 加载完打开window
       $("#om-query-window").window('open');
     };
-    OM_OL_MAP.addControl(OL_CONTROL_DF);
-    OL_CONTROL_DF.activate();
+    OM_OL_MAP.addControl(OL_C_DRAWFEATURE);
+    OL_C_DRAWFEATURE.activate();
   }
   function addDataToQueryWindow(layer_index,layer_name,query_result){
     var table_title_array = [];

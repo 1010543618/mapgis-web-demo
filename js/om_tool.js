@@ -33,6 +33,14 @@ define([], function(){
       $(tabs_selecter).tabs('close', titles[i]); 
     }
   }
+  om_tool.gatAllVisibleLayerIndex = function(){
+    var arr = [];
+    for (var i = 0; i < MAP_LAYERS.subLayerNames.length; i++) {
+        if ($.inArray(i, MAP_LAYERS.hide_layers) === -1) arr.push(i);
+    }
+    return arr;
+  }
+
   om_tool.reset = function() {
     om_tool.removeTip();//移除提示
     // 地图事件
@@ -41,6 +49,9 @@ define([], function(){
     // 向量图层
     if (typeof OL_L_Vector != 'undefined') {
       OL_L_Vector.destroy();
+    }
+    if (typeof OL_L_VECTOR_SELECTED != 'undefined') {
+      OL_L_VECTOR_SELECTED.destroy();
     }
     // 标注图层
     if (typeof OL_L_MARKERS != 'undefined') {
@@ -60,11 +71,12 @@ define([], function(){
         $('#om_map').css('cursor', 'default');
     }
     // 绘图控件
-    if (typeof OL_CONTROL_DF != 'undefined') {
-      OL_CONTROL_DF.destroy();
+    if (typeof OL_C_DRAWFEATURE != 'undefined') {
+      OL_C_DRAWFEATURE.destroy();
     }
   }
   
+
 
 
 

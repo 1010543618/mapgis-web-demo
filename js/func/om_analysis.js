@@ -9,6 +9,122 @@ define([
   'om_tool'
   ], function(){
   var om_analysis = {};
+  om_analysis.overlay_analysis = function(){
+    console.log(MAP_LAYERS);
+
+    // 源图层
+    for (var i = 0; i < MAP_LAYERS.subLayerNames.length; i++) {
+      $("#om-overlay_analysis-source-layer").append("<option>"+MAP_LAYERS.subLayerNames[i]+"</option>");
+    }
+    // 叠加图层
+    var mapdoc = new Zondy.Service.Catalog.MapDoc({ docName: OM_CONFIG.areaMapName, ip: OM_CONFIG.ip, port: OM_CONFIG.port, mapIndex: 0 });
+    window.ZD_S_C_MAPDOC.getMapInfo(function(layers){
+      for (var i = 0; i < layers.subLayerNames.length; i++) {
+        $("#om-overlay_analysis-overlay-layer").append("<option>"+layers.subLayerNames[i]+"</option>");
+      }
+    }, true, true);
+
+    $("#om-overlay_analysis-window").window().window('open');
+    
+    // var overlayService = new Zondy.Service.OverlayByLayer({
+    //     ip: "127.0.0.1",
+    //     srcInfo1: "gdbp://MapGisLocal/world/ds/world/sfcls/中国省界_不含国界.wl",
+    //     srcInfo2: "gdbp://MapGisLocal/world/ds/world/sfcls/clipbox",
+    //     desInfo: "gdbp://MapGisLocal/resultData/sfcls/overlayRlt" + parseInt(10000 * Math.random()),
+    //     radius: 0.000001
+    // });
+    // overlayService.execute(onSuccess);
+    // function onSuccess(data) {
+    //     var result = data.results[0].Value;
+    //     if (result != null) {
+    //         alert("叠加成功!");
+    //         var url = "gdbp://MapGisLocal/resultData/sfcls/" + result;
+    //         resultLayer = new Zondy.Map.Layer("叠加结果", [url], { ip: "127.0.0.1", isBaseLayer: false });
+    //         map.addLayer(resultLayer);
+    //     }
+    //     else alert("叠加失败!");
+    // }
+  }
+  
+  om_analysis.clip_analysis = function(){
+    alert('正在开发。。。');
+  }
+  om_analysis.buffer_analysis = function(){
+    alert('正在开发。。。');
+  }
+  om_analysis.topology_analysis = function(){
+    om_tool.tip('请选择两个元素');
+    window.OL_L_VECTOR = new OpenLayers.Layer.Vector(); //画区层
+    window.OL_L_VECTOR_SELECTED = new OpenLayers.Layer.Vector(); //画区层
+    window.OL_C_DRAWFEATURE = new OpenLayers.Control.DrawFeature(
+      OL_L_VECTOR, 
+      OpenLayers.Handler.Point, 
+      {featureAdded:function(feature){
+        console.log(123);
+        var geomObj = new Zondy.Object.PointForQuery(); //初始化几何点对象 
+        geomObj.nearDis = 1;
+        geomObj.setByOL(feature.geometry);
+        feature.destroy();
+        var queryStruct = new Zondy.Service.QueryFeatureStruct({IncludeGeometry: true}); //初始化查询结构对象 
+        var queryParam = new Zondy.Service.QueryParameter({ geometry: geomObj, 
+          resultFormat: "json", 
+          struct: queryStruct,
+          recordNumber: 1 
+        }); //实例化查询参数对象 
+        var queryService = new Zondy.Service.QueryDocFeature(
+          queryParam, 
+          OM_CONFIG.mapName, 
+          om_tool.gatAllVisibleLayerIndex().join(','), 
+          { ip: OM_CONFIG.ip, port: OM_CONFIG.port }
+        );
+        queryService.query(function(data){
+          console.log(data);
+          for (var layer = 0; layer < MAP_LAYERS["subLayerNames"].length; layer++) {
+            if(data[layer].TotalCount > 0){
+              var format = new Zondy.Format.PolygonJSON();
+              var features = format.read(data[layer]); //解析 JSON 对象
+              OL_L_VECTOR_SELECTED.addFeatures(features);
+              console.log(OL_L_VECTOR_SELECTED, OL_L_VECTOR_SELECTED.features);
+              if (OL_L_VECTOR_SELECTED.features.length >= 2 ) {
+                // 进行拓扑分析
+                var polygonObjs = new Array(2);
+                var gregion = new Array(2);
+                for (var i = 0; i < 2; i++) {
+                    var len = OL_L_VECTOR_SELECTED.features[i].geometry.components[0].components.length;
+                    polygonObjs[i] = new Array();
+                    for (var j = 0; j < len; j++) {
+                        polygonObjs[i][j] = new Zondy.Object.Point2D();
+                        polygonObjs[i][j].setByOL(OL_L_VECTOR_SELECTED.features[i].geometry.components[0].components[j]);
+                    }
+                    var arc = new Zondy.Object.Arc(polygonObjs[i]);
+                    var anyline = new Zondy.Object.AnyLine([arc]);
+                    gregion[i] = new Zondy.Object.GRegion([anyline]);
+                }
+                //调用拓扑分析功能服务
+                var topService = new Zondy.Service.TopAnalysis({
+                    ip: OM_CONFIG.ip,
+                    reg: gregion[0], //源要素几何信息
+                    relativeObj: gregion[1],  //相对要素几何信息
+                    nearDis: "0.01" //容差
+                });
+                topService.execute(function(data){
+                  $.messager.alert('查询结果', "拓扑"+data, 'info', function(){
+                    om_tool.reset();
+                  });
+                });
+              }
+              return;
+            }
+          }
+          alert('未选中要素');
+        });
+      }}
+    );
+    OL_L_VECTOR_SELECTED.setVisibility(true);
+    OM_OL_MAP.addLayers([OL_L_VECTOR, OL_L_VECTOR_SELECTED]);
+    OM_OL_MAP.addControl(OL_C_DRAWFEATURE);
+    OL_C_DRAWFEATURE.activate();
+  }
   om_analysis.path_analysis = function() {
     //分析成功回调函数，显示路径分析结果
     var startPathAnaylse = function(){

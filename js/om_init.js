@@ -130,15 +130,15 @@ define([
                     iconAlign:'top',
                     size:'large'
                 },{
-                    name:"om_analysis.buffer_analysis()",
-                    text:'缓冲区分析',
-                    iconCls:'icon-buffer-analysis icon-large',
-                    iconAlign:'top',
-                    size:'large'
-                },{
                     name:"om_analysis.overlay_analysis()",
                     text:'叠加分析',
                     iconCls:'icon-overlay-analysis icon-large',
+                    iconAlign:'top',
+                    size:'large'
+                },{
+                    name:"om_analysis.buffer_analysis()",
+                    text:'缓冲区分析',
+                    iconCls:'icon-buffer-analysis icon-large',
                     iconAlign:'top',
                     size:'large'
                 },{

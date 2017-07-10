@@ -61,6 +61,7 @@ requirejs(['om_init'],function () {
         ip:"127.0.0.1",//ip地址
         port:"6163",//端口号
         mapName: "gxgl",//地图服务名称
+        areaMapName: "gxgl",//用户提交区域的地图服务名称
         resolution:7.8,//分辨率
         mapBound: new OpenLayers.Bounds(428993.7136, 4350000, 431500, 4352002.484),//范围
         pathAnalysisUrl: "gdbp://MapGisLocal/" + mapSqlName + "/ds/gxgl_set/ncls/道路网",//路径分析Url

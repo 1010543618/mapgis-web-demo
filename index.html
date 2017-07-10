@@ -200,10 +200,100 @@
 			<button onclick="om_analysis.clear_path_analysis()" style="cursor:pointer; font-size:10px;height:25px; width:80px; border-style:none; border:1px solid #9999ff; background-color:#fff; ">清除结果</button>
 		</div>
 	</div>
-	<div id="om-topology-anaylse-window" title="拓扑分析" data-options="iconCls:'icon-topology-analysis icon-small'" style="width:230px;height:100px;padding:20px;display:none;">
-		<button id="om-ta-select" style="cursor:pointer; font-size:10px;height:25px; width:80px; border-style:none; border:1px solid #9999ff; background-color:#fff;">选择要素</button>
-		&nbsp;&nbsp;
-		<button id="om-ta-start" style="cursor:pointer; font-size:10px;height:25px; width:80px; border-style:none; border:1px solid #9999ff; background-color:#fff;">开始分析</button>
+
+	<div id="om-overlay_analysis-window" title="叠加分析" data-options="iconCls:'icon-topology-analysis icon-small'" style="width:300px;padding:20px;display:none;">
+		<form action="javascript:return;" id="om-overlay_analysis-form">
+			<div class="window-row">
+				<span>源&nbsp;&nbsp;图&nbsp;&nbsp;层：</span>
+				<select name="srcInfo1" id="om-overlay_analysis-source-layer"></select>
+			</div>
+			<div class="window-row">
+				<span>叠加图层：</span>
+				<select name="srcInfo2" id="om-overlay_analysis-overlay-layer"></select>
+			</div>
+			<div class="window-row">
+				<span>容差半径：</span>
+				<input name="radius" type="text">
+			</div>
+			<div class="window-row">
+				<span>叠加方式：</span>
+				<select name="overType" id=""></select>
+			</div>
+			<div class="window-row">
+				<span>图形参数：</span>
+				<select name="infoOptType" id=""></select>
+			</div>
+			<div class="window-row">
+				<span>文&nbsp;&nbsp;件&nbsp;&nbsp;名：</span>
+				<input name="desInfo_name" type="text">
+			</div>
+			<div class="window-row">
+				<span>保存路径：</span>
+				<input name="desInfo_path" type="text">
+			</div>
+			<div class="easyui-accordion" data-options="selected:null">
+	        <div title="其他选项" data-options="iconCls:'icon-save'" style="overflow:auto;padding:10px;">
+		    		<div class="window-row">
+							<input type="checkbox" checked="true">
+							<span>是否将分析结果显示在地图上？</span>
+						</div>
+						<div class="window-row">
+							<input name="attOptType" type="checkbox">
+							<span>是否进行属性数据处理？</span>
+						</div>
+						<div class="window-row">
+							<input name="isCleanNode" type="checkbox">
+							<span>是否进行节点平差？</span>
+						</div>
+						<div class="window-row">
+							<input name="isLabelPnt" type="checkbox">
+							<span>是否处理Label点？</span>
+						</div>
+						<div class="window-row">
+							<input name="isValidReg" type="checkbox">
+							<span>是否自动检查区的合法性？</span>
+						</div>
+						<div class="window-row">
+							<input name="isReCalculate" type="checkbox">
+							<span>是否重算面积？</span>
+						</div>
+	        </div>
+	    </div>
+			<div class="window-row">
+				<button id="om-startPathAnaylse" style="">叠加分析</button>
+			</div>
+		</form>
+		<style>
+			.window-row{
+				height:25px; 
+				padding-top:2px;
+				margin-top: 5px;
+				text-align:center;
+			}
+			.window-row span{
+				font-size:10px;
+			}
+			.window-row select{
+				width:130px;
+				height:22px;
+			}
+			.window-row input[type="text"]{
+				width:130px;
+				height:22px;
+			}
+			.window-row button{
+				cursor:pointer; 
+				font-size:10px;
+				height:25px;
+				width:80px; 
+				border-style:none; 
+				border:1px solid #9999ff; 
+				background-color:#fff; 
+			}
+			.easyui-accordion .window-row{
+				text-align: left;
+			}
+		</style>
 	</div>
 </body>
 </html>
