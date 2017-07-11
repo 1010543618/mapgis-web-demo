@@ -1,4 +1,4 @@
-define([], function(){
+define(['jquery'], function($){
   var om_tool = new Object;
   //刷新地图
   om_tool.refresh = function() {
@@ -101,7 +101,23 @@ define([], function(){
       queryPopupArr = null;
     }
   }
-  
+
+  // jquery扩展
+  $.fn.serializeObject = function() {
+    var o = {};
+    var a = this.serializeArray();
+    $.each(a, function() {
+        if (o[this.name] !== undefined) {
+            if (!o[this.name].push) {
+                o[this.name] = [o[this.name]];
+            }
+            o[this.name].push(this.value || '');
+        } else {
+            o[this.name] = this.value || '';
+        }
+    });
+    return o;
+  };
   return (window.om_tool = om_tool);
 });
 

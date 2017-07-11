@@ -202,7 +202,7 @@
 	</div>
 
 	<div id="om-overlay_analysis-window" title="叠加分析" data-options="iconCls:'icon-topology-analysis icon-small'" style="width:300px;padding:20px;display:none;">
-		<form action="javascript:return;" id="om-overlay_analysis-form">
+		<form action="javascript:;" id="om-overlay_analysis-form">
 			<div class="window-row">
 				<span>源&nbsp;&nbsp;图&nbsp;&nbsp;层：</span>
 				<select name="srcInfo1" id="om-overlay_analysis-source-layer"></select>
@@ -213,15 +213,24 @@
 			</div>
 			<div class="window-row">
 				<span>容差半径：</span>
-				<input name="radius" type="text">
+				<input name="radius" type="text" value="0.001">
 			</div>
 			<div class="window-row">
 				<span>叠加方式：</span>
-				<select name="overType" id=""></select>
+				<select name="overType" id="">
+					<option value="0">求并运算</option>
+					<option value="1" selected="selected">相交运算</option>
+					<option value="2">相减运算</option>
+					<option value="6">对称差运算</option>
+				</select>
 			</div>
 			<div class="window-row">
 				<span>图形参数：</span>
-				<select name="infoOptType" id=""></select>
+				<select name="infoOptType" id="">
+					<option value="0">随机生成图形参数</option>
+					<option value="1" selected="selected">根据源图层设置参数</option>
+					<option value="2">图层与多边形叠加</option>
+				</select>
 			</div>
 			<div class="window-row">
 				<span>文&nbsp;&nbsp;件&nbsp;&nbsp;名：</span>
@@ -234,33 +243,33 @@
 			<div class="easyui-accordion" data-options="selected:null">
 	        <div title="其他选项" data-options="iconCls:'icon-save'" style="overflow:auto;padding:10px;">
 		    		<div class="window-row">
-							<input type="checkbox" checked="true">
+							<input name="is_show" value="true" type="checkbox" checked="true">
 							<span>是否将分析结果显示在地图上？</span>
 						</div>
 						<div class="window-row">
-							<input name="attOptType" type="checkbox">
+							<input name="attOptType" value="true" type="checkbox" checked="true">
 							<span>是否进行属性数据处理？</span>
 						</div>
 						<div class="window-row">
-							<input name="isCleanNode" type="checkbox">
+							<input name="isReCalculate" value="true" type="checkbox" checked="true">
+							<span>是否重算面积？</span>
+						</div>
+						<div class="window-row">
+							<input name="isCleanNode" value="true" type="checkbox">
 							<span>是否进行节点平差？</span>
 						</div>
 						<div class="window-row">
-							<input name="isLabelPnt" type="checkbox">
+							<input name="isLabelPnt" value="true" type="checkbox">
 							<span>是否处理Label点？</span>
 						</div>
 						<div class="window-row">
-							<input name="isValidReg" type="checkbox">
+							<input name="isValidReg" value="true" type="checkbox">
 							<span>是否自动检查区的合法性？</span>
-						</div>
-						<div class="window-row">
-							<input name="isReCalculate" type="checkbox">
-							<span>是否重算面积？</span>
 						</div>
 	        </div>
 	    </div>
 			<div class="window-row">
-				<button id="om-startPathAnaylse" style="">叠加分析</button>
+				<button id="om-startOverlayAnaylse" style="">叠加分析</button>
 			</div>
 		</form>
 		<style>

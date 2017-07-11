@@ -11,7 +11,7 @@ define([
   var om_analysis = {};
   om_analysis.overlay_analysis = function(){
     console.log(MAP_LAYERS);
-
+    var $oaw = $("#om-overlay_analysis-window")
     // 源图层
     for (var i = 0; i < MAP_LAYERS.subLayerNames.length; i++) {
       $("#om-overlay_analysis-source-layer").append("<option>"+MAP_LAYERS.subLayerNames[i]+"</option>");
@@ -23,9 +23,27 @@ define([
         $("#om-overlay_analysis-overlay-layer").append("<option>"+layers.subLayerNames[i]+"</option>");
       }
     }, true, true);
-
-    $("#om-overlay_analysis-window").window().window('open');
-    
+    // 结果路径
+    $oaw.find("input[name='desInfo_path']").val(OM_CONFIG.overlaySourceSet);
+    $oaw.window().window('open');
+    $('#om-startOverlayAnaylse').click(function(){
+      var anaylse_option = $('#om-overlay_analysis-form').serializeObject();
+      if (anaylse_option.desInfo_name == '') {
+        anaylse_option.desInfo_name = anaylse_option.srcInfo1 + '_' +  anaylse_option.srcInfo2;
+      }
+      anaylse_option.srcInfo1 = OM_CONFIG.bufferSourceSet + anaylse_option.srcInfo1;
+      anaylse_option.srcInfo2 = OM_CONFIG.bufferSourceSet + anaylse_option.srcInfo2;
+      anaylse_option.desInfo = anaylse_option.desInfo_path+anaylse_option.desInfo_name;
+      anaylse_option.ip = OM_CONFIG.ip;
+      console.log(anaylse_option);
+      var overlayService = new Zondy.Service.OverlayByLayer(anaylse_option);
+      overlayService.execute(function(data){
+        if (anaylse_option.is_show) {
+          window.OM_OL_MAP.addLayers([window.OM_ZD_MAP_DOC]);
+        }
+        console.log(data);
+      }); //指定叠加分析回调函数
+    });
     // var overlayService = new Zondy.Service.OverlayByLayer({
     //     ip: "127.0.0.1",
     //     srcInfo1: "gdbp://MapGisLocal/world/ds/world/sfcls/中国省界_不含国界.wl",
