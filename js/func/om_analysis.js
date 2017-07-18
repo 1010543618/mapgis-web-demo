@@ -27,7 +27,12 @@ define([
     $oaw.find("input[name='desInfo_path']").val(OM_CONFIG.overlaySourceSet);
     $oaw.window().window('open');
     $('#om-startOverlayAnaylse').click(function(){
+      $('#om-startOverlayAnaylse').text('正在分析。。。').css('cursor', 'wait').attr('disabled', true);
       var anaylse_option = $('#om-overlay_analysis-form').serializeObject();
+      anaylse_option.attOptType = Number(anaylse_option.attOptType);
+      anaylse_option.infoOptType = Number(anaylse_option.infoOptType);
+      anaylse_option.isReCalculate == !!anaylse_option.isReCalculate;
+      anaylse_option.radius = Number(anaylse_option.radius);
       if (anaylse_option.desInfo_name == '') {
         anaylse_option.desInfo_name = anaylse_option.srcInfo1 + '_' +  anaylse_option.srcInfo2;
       }
@@ -35,13 +40,13 @@ define([
       anaylse_option.srcInfo2 = OM_CONFIG.bufferSourceSet + anaylse_option.srcInfo2;
       anaylse_option.desInfo = anaylse_option.desInfo_path+anaylse_option.desInfo_name;
       anaylse_option.ip = OM_CONFIG.ip;
-      console.log(anaylse_option);
       var overlayService = new Zondy.Service.OverlayByLayer(anaylse_option);
       overlayService.execute(function(data){
-        if (anaylse_option.is_show) {
-          window.OM_OL_MAP.addLayers([window.OM_ZD_MAP_DOC]);
+        $('#om-startOverlayAnaylse').text('叠加分析').css('cursor', 'pointer').prop('disabled', false);
+        if (!!anaylse_option.is_show) {
+          window.ZD_M_LAYER = new Zondy.Map.Layer(anaylse_option.desInfo_name, [anaylse_option.desInfo], { ip: OM_CONFIG.ip, isBaseLayer: false });
+          window.OM_OL_MAP.addLayers([window.ZD_M_LAYER]);
         }
-        console.log(data);
       }); //指定叠加分析回调函数
     });
     // var overlayService = new Zondy.Service.OverlayByLayer({

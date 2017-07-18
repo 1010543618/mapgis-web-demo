@@ -46,6 +46,10 @@ define(['jquery'], function($){
     // 地图事件
     OM_OL_MAP.events.unregister("click", null, window.OL_EVENTS.query);
     
+
+    if (typeof ZD_M_LAYER != 'undefined') {
+      ZD_M_LAYER.destroy();
+    }
     // 向量图层
     if (typeof OL_L_Vector != 'undefined') {
       OL_L_Vector.destroy();
