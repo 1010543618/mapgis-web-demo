@@ -56,16 +56,16 @@ requirejs(['user_module'],function(){
 });
 
 requirejs(['om_init'],function () {
-    var mapSqlName = "gxgl";//数据库名称
+    var mapSqlName = "one_map01";//数据库名称
     window.OM_CONFIG = {
         ip:"127.0.0.1",//ip地址
         port:"6163",//端口号
-        mapName: "gxgl",//地图服务名称
-        areaMapName: "gxgl",//用户提交区域的地图服务名称
-        resolution:7.8,//分辨率
-        mapBound: new OpenLayers.Bounds(428993.7136, 4350000, 431500, 4352002.484),//范围
-        pathAnalysisUrl: "gdbp://MapGisLocal/" + mapSqlName + "/ds/gxgl_set/ncls/道路网",//路径分析Url
-        pathAnalysisAddr: "gdbp://MapGisLocal/" + mapSqlName + "/ds/gxgl_set/sfcls/地址点", //路径分析地址点
+        mapName: "one_map",//地图服务名称
+        areaMapName: "one_map",//用户提交区域的地图服务名称
+        resolution:13,//分辨率
+        mapBound: new OpenLayers.Bounds(41390938.3458,4666365.89887,41395992.0725,4670722.454756),//范围
+        pathAnalysisUrl: "gdbp://MapGisLocal/" + mapSqlName + "/ds/base_map/ncls/道路网",//路径分析Url
+        pathAnalysisAddr: "gdbp://MapGisLocal/" + mapSqlName + "/ds/base_map/sfcls/地址点", //路径分析地址点
         bufferSourceSet: "gdbp://MapGisLocal/" + mapSqlName + "/ds/buffer/sfcls/", //缓冲区分析分析Url
         overlaySourceSet: "gdbp://MapGisLocal/" + mapSqlName + "/ds/overlay/sfcls/",//叠加分析Url
         SrcLayer: "gdbp://MapGisLocal/" + mapSqlName + "/ds/gxgl_set/sfcls/", //空间分析Url
@@ -80,7 +80,7 @@ requirejs(['om_init'],function () {
         units: "m"
     });
     //地图加载
-    window.OM_ZD_MAP_DOC = new Zondy.Map.Doc("管线地图", OM_CONFIG.mapName, { ip: OM_CONFIG.ip, port: OM_CONFIG.port, transitionEffect: "resize", singleTile: true }); //,guid:statisOper.guid
+    window.OM_ZD_MAP_DOC = new Zondy.Map.Doc("", OM_CONFIG.mapName, { ip: OM_CONFIG.ip, port: OM_CONFIG.port, transitionEffect: "resize", singleTile: true }); //,guid:statisOper.guid
     window.OM_OL_MAP.addLayers([window.OM_ZD_MAP_DOC]);
     window.ZD_S_C_MAPDOC = new Zondy.Service.Catalog.MapDoc({ docName: OM_CONFIG.mapName, ip: OM_CONFIG.ip, port: OM_CONFIG.port, mapIndex: 0 });
     window.ZD_S_C_MAPDOC.getMapInfo(function(layers){

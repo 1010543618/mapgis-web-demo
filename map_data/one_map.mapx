@@ -1,0 +1,891 @@
+<?xml version="1.0" encoding="gb2312" standalone="no" ?>
+<datacenter>
+    <root filePath="C:\one_map.mapx" title="地图文档" subject="" author="" category="" keywords="" comments="" version="MapGIS K10">
+        <ClibDir6x></ClibDir6x>
+        <SlibDir6x></SlibDir6x>
+        <subnode name="赵大把营子村" mapguid="e547da4b-f973-45fd-8d96-448a3246587b" LegendBoardGUID="00000000-0000-0000-0000-000000000000" LegendBoardID="-1" type="Map" class="CreateMap@GisCartoPrj.dll">
+            <description></description>
+            <isDisplayOnLayout>1</isDisplayOnLayout>
+            <isCustomEntireExtent>0</isCustomEntireExtent>
+            <customEntireExtent xmin="0." ymin="0." xmax="0." ymax="0."></customEntireExtent>
+            <viewExtent xmin="41389923.787571095" ymin="4669111.1231450094" xmax="41397057.872301728" ymax="4670937.0497264164"></viewExtent>
+            <minScale>0.</minScale>
+            <maxScale>0.</maxScale>
+            <isFixedScalesDisplay>0</isFixedScalesDisplay>
+            <isProjTrans>0</isProjTrans>
+            <rotateCenter>
+                <X>0.</X>
+                <Y>0.</Y>
+            </rotateCenter>
+            <rotateAngle>0.</rotateAngle>
+            <backColor>9</backColor>
+            <backgroundImage></backgroundImage>
+            <displayHint>1</displayHint>
+            <imageLayerZoom>-1</imageLayerZoom>
+            <fixedScales></fixedScales>
+            <subnode name="采矿用地" type="SFeatureLayer" geometryType="3" class="CreateGLayer@GisCartoPrj.dll" LayerClassCode="0">
+                <url>gdbp://MapGisLocal/one_map01/ds/base_map/sfcls/采矿用地</url>
+                <layerWeight>0</layerWeight>
+                <IsSnaped>1</IsSnaped>
+                <state>VISIBLE</state>
+                <minScale>0.</minScale>
+                <maxScale>0.</maxScale>
+                <directIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></directIndex>
+                <reverseIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></reverseIndex>
+                <conditions>0000000000000000000000000000000000</conditions>
+                <CustomLayerRenderInfo dllName="" className="" renderName="" descript="" midWareType="0" dataType="0" param="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"></CustomLayerRenderInfo>
+                <vectorRenderInfo sCoordDecDigit="-1569"></vectorRenderInfo>
+                <IsDispElementRect>0</IsDispElementRect>
+                <IsSameAs6xNotDraw0Lin>0</IsSameAs6xNotDraw0Lin>
+                <label name="noname" type="SimpleLabel" class="CreateGLabel@GisCartoPrj.dll">
+                    <state>UNVISIBLE</state>
+                    <geomInfoType>5</geomInfoType>
+                    <minScale>0.</minScale>
+                    <maxScale>0.</maxScale>
+                    <geoInfo>
+                        <annInfo height="14." width="14." space="0." fontang="0." strang="0." ifnt="0" chnt="0" ifnx="0" hvpl="0" iclr="0" ovprnt="0" fillflg="0" backexp="0." backclr="0" offsetx="0." offsety="0."></annInfo>
+                    </geoInfo>
+                    <labelExpression></labelExpression>
+                    <geomType>pnt</geomType>
+                    <priority>1</priority>
+                    <isLabelClientOutside>false</isLabelClientOutside>
+                    <backType>1</backType>
+                    <highlightClr>0</highlightClr>
+                    <backGeoInfo>
+                        <linInfo lib="0" id="1" ovprnt="0" outpenw="5.000000074505806e-002;5.000000074505806e-002;5.000000074505806e-002" outclr="9;4;3" headtype="0" jointype="0" adjustflg="0" makemethod="0" xscale="10." yscale="10."></linInfo>
+                    </backGeoInfo>
+                    <numericPrecision>0</numericPrecision>
+                    <isNewLineToLabel>false</isNewLineToLabel>
+                    <maxLengthPreLine>0</maxLengthPreLine>
+                    <isLabelUnPlaced>false</isLabelUnPlaced>
+                    <reducedSizeForContinulLabel>0</reducedSizeForContinulLabel>
+                    <isHighlightLabelUnPlaced>false</isHighlightLabelUnPlaced>
+                    <labelFormat></labelFormat>
+                    <placeInfo type="1" offset="0." eightLocationPrioritys="1;2;3;4;5;6;7;8" anyLocationCount="1" anyLocationPrioritys="0." isAvoidPointSymbol="0" isFollowPointSymbolBorder="0"></placeInfo>
+                </label>
+                <LayerControl LayerNo="0">
+                    <LayerState></LayerState>
+                </LayerControl>
+                <Extend></Extend>
+            </subnode>
+            <subnode name="村庄" type="SFeatureLayer" geometryType="3" class="CreateGLayer@GisCartoPrj.dll" LayerClassCode="0">
+                <url>gdbp://MapGisLocal/one_map01/ds/base_map/sfcls/村庄</url>
+                <layerWeight>0</layerWeight>
+                <IsSnaped>1</IsSnaped>
+                <state>VISIBLE</state>
+                <minScale>0.</minScale>
+                <maxScale>0.</maxScale>
+                <directIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></directIndex>
+                <reverseIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></reverseIndex>
+                <conditions>0000000000000000000000000000000000</conditions>
+                <CustomLayerRenderInfo dllName="" className="" renderName="" descript="" midWareType="0" dataType="0" param="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"></CustomLayerRenderInfo>
+                <IsDispElementRect>0</IsDispElementRect>
+                <IsSameAs6xNotDraw0Lin>0</IsSameAs6xNotDraw0Lin>
+                <label name="noname" type="SimpleLabel" class="CreateGLabel@GisCartoPrj.dll">
+                    <state>UNVISIBLE</state>
+                    <geomInfoType>5</geomInfoType>
+                    <minScale>0.</minScale>
+                    <maxScale>0.</maxScale>
+                    <geoInfo>
+                        <annInfo height="14." width="14." space="0." fontang="0." strang="0." ifnt="0" chnt="0" ifnx="0" hvpl="0" iclr="0" ovprnt="0" fillflg="0" backexp="0." backclr="0" offsetx="0." offsety="0."></annInfo>
+                    </geoInfo>
+                    <labelExpression></labelExpression>
+                    <geomType>pnt</geomType>
+                    <priority>1</priority>
+                    <isLabelClientOutside>false</isLabelClientOutside>
+                    <backType>1</backType>
+                    <highlightClr>0</highlightClr>
+                    <backGeoInfo>
+                        <linInfo lib="0" id="1" ovprnt="0" outpenw="5.000000074505806e-002;5.000000074505806e-002;5.000000074505806e-002" outclr="9;4;3" headtype="0" jointype="0" adjustflg="0" makemethod="0" xscale="10." yscale="10."></linInfo>
+                    </backGeoInfo>
+                    <numericPrecision>0</numericPrecision>
+                    <isNewLineToLabel>false</isNewLineToLabel>
+                    <maxLengthPreLine>0</maxLengthPreLine>
+                    <isLabelUnPlaced>false</isLabelUnPlaced>
+                    <reducedSizeForContinulLabel>0</reducedSizeForContinulLabel>
+                    <isHighlightLabelUnPlaced>false</isHighlightLabelUnPlaced>
+                    <labelFormat></labelFormat>
+                    <placeInfo type="1" offset="0." eightLocationPrioritys="1;2;3;4;5;6;7;8" anyLocationCount="1" anyLocationPrioritys="0." isAvoidPointSymbol="0" isFollowPointSymbolBorder="0"></placeInfo>
+                </label>
+                <LayerControl LayerNo="0">
+                    <LayerState></LayerState>
+                </LayerControl>
+                <Extend></Extend>
+            </subnode>
+            <subnode name="风景名胜及特殊用地" type="SFeatureLayer" geometryType="3" class="CreateGLayer@GisCartoPrj.dll" LayerClassCode="0">
+                <url>gdbp://MapGisLocal/one_map01/ds/base_map/sfcls/风景名胜及特殊用地</url>
+                <layerWeight>0</layerWeight>
+                <IsSnaped>1</IsSnaped>
+                <state>VISIBLE</state>
+                <minScale>0.</minScale>
+                <maxScale>0.</maxScale>
+                <directIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></directIndex>
+                <reverseIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></reverseIndex>
+                <conditions>0000000000000000000000000000000000</conditions>
+                <CustomLayerRenderInfo dllName="" className="" renderName="" descript="" midWareType="0" dataType="0" param="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"></CustomLayerRenderInfo>
+                <IsDispElementRect>0</IsDispElementRect>
+                <IsSameAs6xNotDraw0Lin>0</IsSameAs6xNotDraw0Lin>
+                <label name="noname" type="SimpleLabel" class="CreateGLabel@GisCartoPrj.dll">
+                    <state>UNVISIBLE</state>
+                    <geomInfoType>5</geomInfoType>
+                    <minScale>0.</minScale>
+                    <maxScale>0.</maxScale>
+                    <geoInfo>
+                        <annInfo height="14." width="14." space="0." fontang="0." strang="0." ifnt="0" chnt="0" ifnx="0" hvpl="0" iclr="0" ovprnt="0" fillflg="0" backexp="0." backclr="0" offsetx="0." offsety="0."></annInfo>
+                    </geoInfo>
+                    <labelExpression></labelExpression>
+                    <geomType>pnt</geomType>
+                    <priority>1</priority>
+                    <isLabelClientOutside>false</isLabelClientOutside>
+                    <backType>1</backType>
+                    <highlightClr>0</highlightClr>
+                    <backGeoInfo>
+                        <linInfo lib="0" id="1" ovprnt="0" outpenw="5.000000074505806e-002;5.000000074505806e-002;5.000000074505806e-002" outclr="9;4;3" headtype="0" jointype="0" adjustflg="0" makemethod="0" xscale="10." yscale="10."></linInfo>
+                    </backGeoInfo>
+                    <numericPrecision>0</numericPrecision>
+                    <isNewLineToLabel>false</isNewLineToLabel>
+                    <maxLengthPreLine>0</maxLengthPreLine>
+                    <isLabelUnPlaced>false</isLabelUnPlaced>
+                    <reducedSizeForContinulLabel>0</reducedSizeForContinulLabel>
+                    <isHighlightLabelUnPlaced>false</isHighlightLabelUnPlaced>
+                    <labelFormat></labelFormat>
+                    <placeInfo type="1" offset="0." eightLocationPrioritys="1;2;3;4;5;6;7;8" anyLocationCount="1" anyLocationPrioritys="0." isAvoidPointSymbol="0" isFollowPointSymbolBorder="0"></placeInfo>
+                </label>
+                <LayerControl LayerNo="0">
+                    <LayerState></LayerState>
+                </LayerControl>
+                <Extend></Extend>
+            </subnode>
+            <subnode name="公路用地" type="SFeatureLayer" geometryType="3" class="CreateGLayer@GisCartoPrj.dll" LayerClassCode="0">
+                <url>gdbp://MapGisLocal/one_map01/ds/base_map/sfcls/公路用地</url>
+                <layerWeight>0</layerWeight>
+                <IsSnaped>1</IsSnaped>
+                <state>VISIBLE</state>
+                <minScale>0.</minScale>
+                <maxScale>0.</maxScale>
+                <directIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></directIndex>
+                <reverseIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></reverseIndex>
+                <conditions>0000000000000000000000000000000000</conditions>
+                <CustomLayerRenderInfo dllName="" className="" renderName="" descript="" midWareType="0" dataType="0" param="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"></CustomLayerRenderInfo>
+                <vectorRenderInfo sCoordDecDigit="24576"></vectorRenderInfo>
+                <IsDispElementRect>0</IsDispElementRect>
+                <IsSameAs6xNotDraw0Lin>0</IsSameAs6xNotDraw0Lin>
+                <label name="noname" type="SimpleLabel" class="CreateGLabel@GisCartoPrj.dll">
+                    <state>UNVISIBLE</state>
+                    <geomInfoType>5</geomInfoType>
+                    <minScale>0.</minScale>
+                    <maxScale>0.</maxScale>
+                    <geoInfo>
+                        <annInfo height="14." width="14." space="0." fontang="0." strang="0." ifnt="0" chnt="0" ifnx="0" hvpl="0" iclr="0" ovprnt="0" fillflg="0" backexp="0." backclr="0" offsetx="0." offsety="0."></annInfo>
+                    </geoInfo>
+                    <labelExpression></labelExpression>
+                    <geomType>pnt</geomType>
+                    <priority>1</priority>
+                    <isLabelClientOutside>false</isLabelClientOutside>
+                    <backType>1</backType>
+                    <highlightClr>0</highlightClr>
+                    <backGeoInfo>
+                        <linInfo lib="0" id="1" ovprnt="0" outpenw="5.000000074505806e-002;5.000000074505806e-002;5.000000074505806e-002" outclr="9;4;3" headtype="0" jointype="0" adjustflg="0" makemethod="0" xscale="10." yscale="10."></linInfo>
+                    </backGeoInfo>
+                    <numericPrecision>0</numericPrecision>
+                    <isNewLineToLabel>false</isNewLineToLabel>
+                    <maxLengthPreLine>0</maxLengthPreLine>
+                    <isLabelUnPlaced>false</isLabelUnPlaced>
+                    <reducedSizeForContinulLabel>0</reducedSizeForContinulLabel>
+                    <isHighlightLabelUnPlaced>false</isHighlightLabelUnPlaced>
+                    <labelFormat></labelFormat>
+                    <placeInfo type="1" offset="0." eightLocationPrioritys="1;2;3;4;5;6;7;8" anyLocationCount="1" anyLocationPrioritys="0." isAvoidPointSymbol="0" isFollowPointSymbolBorder="0"></placeInfo>
+                </label>
+                <LayerControl LayerNo="0">
+                    <LayerState></LayerState>
+                </LayerControl>
+                <Extend></Extend>
+            </subnode>
+            <subnode name="灌木林地" type="SFeatureLayer" geometryType="3" class="CreateGLayer@GisCartoPrj.dll" LayerClassCode="0">
+                <url>gdbp://MapGisLocal/one_map01/ds/base_map/sfcls/灌木林地</url>
+                <layerWeight>0</layerWeight>
+                <IsSnaped>1</IsSnaped>
+                <state>VISIBLE</state>
+                <minScale>0.</minScale>
+                <maxScale>0.</maxScale>
+                <directIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></directIndex>
+                <reverseIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></reverseIndex>
+                <conditions>0000000000000000000000000000000000</conditions>
+                <CustomLayerRenderInfo dllName="" className="" renderName="" descript="" midWareType="0" dataType="0" param="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"></CustomLayerRenderInfo>
+                <vectorRenderInfo sCoordDecDigit="9561"></vectorRenderInfo>
+                <IsDispElementRect>0</IsDispElementRect>
+                <IsSameAs6xNotDraw0Lin>0</IsSameAs6xNotDraw0Lin>
+                <label name="noname" type="SimpleLabel" class="CreateGLabel@GisCartoPrj.dll">
+                    <state>UNVISIBLE</state>
+                    <geomInfoType>5</geomInfoType>
+                    <minScale>0.</minScale>
+                    <maxScale>0.</maxScale>
+                    <geoInfo>
+                        <annInfo height="14." width="14." space="0." fontang="0." strang="0." ifnt="0" chnt="0" ifnx="0" hvpl="0" iclr="0" ovprnt="0" fillflg="0" backexp="0." backclr="0" offsetx="0." offsety="0."></annInfo>
+                    </geoInfo>
+                    <labelExpression></labelExpression>
+                    <geomType>pnt</geomType>
+                    <priority>1</priority>
+                    <isLabelClientOutside>false</isLabelClientOutside>
+                    <backType>1</backType>
+                    <highlightClr>0</highlightClr>
+                    <backGeoInfo>
+                        <linInfo lib="0" id="1" ovprnt="0" outpenw="5.000000074505806e-002;5.000000074505806e-002;5.000000074505806e-002" outclr="9;4;3" headtype="0" jointype="0" adjustflg="0" makemethod="0" xscale="10." yscale="10."></linInfo>
+                    </backGeoInfo>
+                    <numericPrecision>0</numericPrecision>
+                    <isNewLineToLabel>false</isNewLineToLabel>
+                    <maxLengthPreLine>0</maxLengthPreLine>
+                    <isLabelUnPlaced>false</isLabelUnPlaced>
+                    <reducedSizeForContinulLabel>0</reducedSizeForContinulLabel>
+                    <isHighlightLabelUnPlaced>false</isHighlightLabelUnPlaced>
+                    <labelFormat></labelFormat>
+                    <placeInfo type="1" offset="0." eightLocationPrioritys="1;2;3;4;5;6;7;8" anyLocationCount="1" anyLocationPrioritys="0." isAvoidPointSymbol="0" isFollowPointSymbolBorder="0"></placeInfo>
+                </label>
+                <LayerControl LayerNo="0">
+                    <LayerState></LayerState>
+                </LayerControl>
+                <Extend></Extend>
+            </subnode>
+            <subnode name="果园" type="SFeatureLayer" geometryType="3" class="CreateGLayer@GisCartoPrj.dll" LayerClassCode="0">
+                <url>gdbp://MapGisLocal/one_map01/ds/base_map/sfcls/果园</url>
+                <layerWeight>0</layerWeight>
+                <IsSnaped>1</IsSnaped>
+                <state>VISIBLE</state>
+                <minScale>0.</minScale>
+                <maxScale>0.</maxScale>
+                <directIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></directIndex>
+                <reverseIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></reverseIndex>
+                <conditions>0000000000000000000000000000000000</conditions>
+                <CustomLayerRenderInfo dllName="" className="" renderName="" descript="" midWareType="0" dataType="0" param="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"></CustomLayerRenderInfo>
+                <vectorRenderInfo sCoordDecDigit="16705"></vectorRenderInfo>
+                <IsDispElementRect>0</IsDispElementRect>
+                <IsSameAs6xNotDraw0Lin>0</IsSameAs6xNotDraw0Lin>
+                <label name="noname" type="SimpleLabel" class="CreateGLabel@GisCartoPrj.dll">
+                    <state>UNVISIBLE</state>
+                    <geomInfoType>5</geomInfoType>
+                    <minScale>0.</minScale>
+                    <maxScale>0.</maxScale>
+                    <geoInfo>
+                        <annInfo height="14." width="14." space="0." fontang="0." strang="0." ifnt="0" chnt="0" ifnx="0" hvpl="0" iclr="0" ovprnt="0" fillflg="0" backexp="0." backclr="0" offsetx="0." offsety="0."></annInfo>
+                    </geoInfo>
+                    <labelExpression></labelExpression>
+                    <geomType>pnt</geomType>
+                    <priority>1</priority>
+                    <isLabelClientOutside>false</isLabelClientOutside>
+                    <backType>1</backType>
+                    <highlightClr>0</highlightClr>
+                    <backGeoInfo>
+                        <linInfo lib="0" id="1" ovprnt="0" outpenw="5.000000074505806e-002;5.000000074505806e-002;5.000000074505806e-002" outclr="9;4;3" headtype="0" jointype="0" adjustflg="0" makemethod="0" xscale="10." yscale="10."></linInfo>
+                    </backGeoInfo>
+                    <numericPrecision>0</numericPrecision>
+                    <isNewLineToLabel>false</isNewLineToLabel>
+                    <maxLengthPreLine>0</maxLengthPreLine>
+                    <isLabelUnPlaced>false</isLabelUnPlaced>
+                    <reducedSizeForContinulLabel>0</reducedSizeForContinulLabel>
+                    <isHighlightLabelUnPlaced>false</isHighlightLabelUnPlaced>
+                    <labelFormat></labelFormat>
+                    <placeInfo type="1" offset="0." eightLocationPrioritys="1;2;3;4;5;6;7;8" anyLocationCount="1" anyLocationPrioritys="0." isAvoidPointSymbol="0" isFollowPointSymbolBorder="0"></placeInfo>
+                </label>
+                <LayerControl LayerNo="0">
+                    <LayerState></LayerState>
+                </LayerControl>
+                <Extend></Extend>
+            </subnode>
+            <subnode name="旱地" type="SFeatureLayer" geometryType="3" class="CreateGLayer@GisCartoPrj.dll" LayerClassCode="0">
+                <url>gdbp://MapGisLocal/one_map01/ds/base_map/sfcls/旱地</url>
+                <layerWeight>0</layerWeight>
+                <IsSnaped>1</IsSnaped>
+                <state>VISIBLE</state>
+                <minScale>0.</minScale>
+                <maxScale>0.</maxScale>
+                <directIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></directIndex>
+                <reverseIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></reverseIndex>
+                <conditions>0000000000000000000000000000000000</conditions>
+                <CustomLayerRenderInfo dllName="" className="" renderName="" descript="" midWareType="0" dataType="0" param="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"></CustomLayerRenderInfo>
+                <vectorRenderInfo sCoordDecDigit="28532"></vectorRenderInfo>
+                <IsDispElementRect>0</IsDispElementRect>
+                <IsSameAs6xNotDraw0Lin>0</IsSameAs6xNotDraw0Lin>
+                <label name="noname" type="SimpleLabel" class="CreateGLabel@GisCartoPrj.dll">
+                    <state>UNVISIBLE</state>
+                    <geomInfoType>5</geomInfoType>
+                    <minScale>0.</minScale>
+                    <maxScale>0.</maxScale>
+                    <geoInfo>
+                        <annInfo height="14." width="14." space="0." fontang="0." strang="0." ifnt="0" chnt="0" ifnx="0" hvpl="0" iclr="0" ovprnt="0" fillflg="0" backexp="0." backclr="0" offsetx="0." offsety="0."></annInfo>
+                    </geoInfo>
+                    <labelExpression></labelExpression>
+                    <geomType>pnt</geomType>
+                    <priority>1</priority>
+                    <isLabelClientOutside>false</isLabelClientOutside>
+                    <backType>1</backType>
+                    <highlightClr>0</highlightClr>
+                    <backGeoInfo>
+                        <linInfo lib="0" id="1" ovprnt="0" outpenw="5.000000074505806e-002;5.000000074505806e-002;5.000000074505806e-002" outclr="9;4;3" headtype="0" jointype="0" adjustflg="0" makemethod="0" xscale="10." yscale="10."></linInfo>
+                    </backGeoInfo>
+                    <numericPrecision>0</numericPrecision>
+                    <isNewLineToLabel>false</isNewLineToLabel>
+                    <maxLengthPreLine>0</maxLengthPreLine>
+                    <isLabelUnPlaced>false</isLabelUnPlaced>
+                    <reducedSizeForContinulLabel>0</reducedSizeForContinulLabel>
+                    <isHighlightLabelUnPlaced>false</isHighlightLabelUnPlaced>
+                    <labelFormat></labelFormat>
+                    <placeInfo type="1" offset="0." eightLocationPrioritys="1;2;3;4;5;6;7;8" anyLocationCount="1" anyLocationPrioritys="0." isAvoidPointSymbol="0" isFollowPointSymbolBorder="0"></placeInfo>
+                </label>
+                <LayerControl LayerNo="0">
+                    <LayerState></LayerState>
+                </LayerControl>
+                <Extend></Extend>
+            </subnode>
+            <subnode name="河流水面" type="SFeatureLayer" geometryType="3" class="CreateGLayer@GisCartoPrj.dll" LayerClassCode="0">
+                <url>gdbp://MapGisLocal/one_map01/ds/base_map/sfcls/河流水面</url>
+                <layerWeight>0</layerWeight>
+                <IsSnaped>1</IsSnaped>
+                <state>VISIBLE</state>
+                <minScale>0.</minScale>
+                <maxScale>0.</maxScale>
+                <directIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></directIndex>
+                <reverseIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></reverseIndex>
+                <conditions>0000000000000000000000000000000000</conditions>
+                <CustomLayerRenderInfo dllName="" className="" renderName="" descript="" midWareType="0" dataType="0" param="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"></CustomLayerRenderInfo>
+                <IsDispElementRect>0</IsDispElementRect>
+                <IsSameAs6xNotDraw0Lin>0</IsSameAs6xNotDraw0Lin>
+                <label name="noname" type="SimpleLabel" class="CreateGLabel@GisCartoPrj.dll">
+                    <state>UNVISIBLE</state>
+                    <geomInfoType>5</geomInfoType>
+                    <minScale>0.</minScale>
+                    <maxScale>0.</maxScale>
+                    <geoInfo>
+                        <annInfo height="14." width="14." space="0." fontang="0." strang="0." ifnt="0" chnt="0" ifnx="0" hvpl="0" iclr="0" ovprnt="0" fillflg="0" backexp="0." backclr="0" offsetx="0." offsety="0."></annInfo>
+                    </geoInfo>
+                    <labelExpression></labelExpression>
+                    <geomType>pnt</geomType>
+                    <priority>1</priority>
+                    <isLabelClientOutside>false</isLabelClientOutside>
+                    <backType>1</backType>
+                    <highlightClr>0</highlightClr>
+                    <backGeoInfo>
+                        <linInfo lib="0" id="1" ovprnt="0" outpenw="5.000000074505806e-002;5.000000074505806e-002;5.000000074505806e-002" outclr="9;4;3" headtype="0" jointype="0" adjustflg="0" makemethod="0" xscale="10." yscale="10."></linInfo>
+                    </backGeoInfo>
+                    <numericPrecision>0</numericPrecision>
+                    <isNewLineToLabel>false</isNewLineToLabel>
+                    <maxLengthPreLine>0</maxLengthPreLine>
+                    <isLabelUnPlaced>false</isLabelUnPlaced>
+                    <reducedSizeForContinulLabel>0</reducedSizeForContinulLabel>
+                    <isHighlightLabelUnPlaced>false</isHighlightLabelUnPlaced>
+                    <labelFormat></labelFormat>
+                    <placeInfo type="1" offset="0." eightLocationPrioritys="1;2;3;4;5;6;7;8" anyLocationCount="1" anyLocationPrioritys="0." isAvoidPointSymbol="0" isFollowPointSymbolBorder="0"></placeInfo>
+                </label>
+                <LayerControl LayerNo="0">
+                    <LayerState></LayerState>
+                </LayerControl>
+                <Extend></Extend>
+            </subnode>
+            <subnode name="坑塘水面" type="SFeatureLayer" geometryType="3" class="CreateGLayer@GisCartoPrj.dll" LayerClassCode="0">
+                <url>gdbp://MapGisLocal/one_map01/ds/base_map/sfcls/坑塘水面</url>
+                <layerWeight>0</layerWeight>
+                <IsSnaped>1</IsSnaped>
+                <state>VISIBLE</state>
+                <minScale>0.</minScale>
+                <maxScale>0.</maxScale>
+                <directIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></directIndex>
+                <reverseIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></reverseIndex>
+                <conditions>0000000000000000000000000000000000</conditions>
+                <CustomLayerRenderInfo dllName="" className="" renderName="" descript="" midWareType="0" dataType="0" param="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"></CustomLayerRenderInfo>
+                <IsDispElementRect>0</IsDispElementRect>
+                <IsSameAs6xNotDraw0Lin>0</IsSameAs6xNotDraw0Lin>
+                <label name="noname" type="SimpleLabel" class="CreateGLabel@GisCartoPrj.dll">
+                    <state>UNVISIBLE</state>
+                    <geomInfoType>5</geomInfoType>
+                    <minScale>0.</minScale>
+                    <maxScale>0.</maxScale>
+                    <geoInfo>
+                        <annInfo height="14." width="14." space="0." fontang="0." strang="0." ifnt="0" chnt="0" ifnx="0" hvpl="0" iclr="0" ovprnt="0" fillflg="0" backexp="0." backclr="0" offsetx="0." offsety="0."></annInfo>
+                    </geoInfo>
+                    <labelExpression></labelExpression>
+                    <geomType>pnt</geomType>
+                    <priority>1</priority>
+                    <isLabelClientOutside>false</isLabelClientOutside>
+                    <backType>1</backType>
+                    <highlightClr>0</highlightClr>
+                    <backGeoInfo>
+                        <linInfo lib="0" id="1" ovprnt="0" outpenw="5.000000074505806e-002;5.000000074505806e-002;5.000000074505806e-002" outclr="9;4;3" headtype="0" jointype="0" adjustflg="0" makemethod="0" xscale="10." yscale="10."></linInfo>
+                    </backGeoInfo>
+                    <numericPrecision>0</numericPrecision>
+                    <isNewLineToLabel>false</isNewLineToLabel>
+                    <maxLengthPreLine>0</maxLengthPreLine>
+                    <isLabelUnPlaced>false</isLabelUnPlaced>
+                    <reducedSizeForContinulLabel>0</reducedSizeForContinulLabel>
+                    <isHighlightLabelUnPlaced>false</isHighlightLabelUnPlaced>
+                    <labelFormat></labelFormat>
+                    <placeInfo type="1" offset="0." eightLocationPrioritys="1;2;3;4;5;6;7;8" anyLocationCount="1" anyLocationPrioritys="0." isAvoidPointSymbol="0" isFollowPointSymbolBorder="0"></placeInfo>
+                </label>
+                <LayerControl LayerNo="0">
+                    <LayerState></LayerState>
+                </LayerControl>
+                <Extend></Extend>
+            </subnode>
+            <subnode name="农村道路" type="SFeatureLayer" geometryType="3" class="CreateGLayer@GisCartoPrj.dll" LayerClassCode="0">
+                <url>gdbp://MapGisLocal/one_map01/ds/base_map/sfcls/农村道路</url>
+                <layerWeight>0</layerWeight>
+                <IsSnaped>1</IsSnaped>
+                <state>VISIBLE</state>
+                <minScale>0.</minScale>
+                <maxScale>0.</maxScale>
+                <directIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></directIndex>
+                <reverseIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></reverseIndex>
+                <conditions>0000000000000000000000000000000000</conditions>
+                <CustomLayerRenderInfo dllName="" className="" renderName="" descript="" midWareType="0" dataType="0" param="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"></CustomLayerRenderInfo>
+                <IsDispElementRect>0</IsDispElementRect>
+                <IsSameAs6xNotDraw0Lin>0</IsSameAs6xNotDraw0Lin>
+                <label name="noname" type="SimpleLabel" class="CreateGLabel@GisCartoPrj.dll">
+                    <state>UNVISIBLE</state>
+                    <geomInfoType>5</geomInfoType>
+                    <minScale>0.</minScale>
+                    <maxScale>0.</maxScale>
+                    <geoInfo>
+                        <annInfo height="14." width="14." space="0." fontang="0." strang="0." ifnt="0" chnt="0" ifnx="0" hvpl="0" iclr="0" ovprnt="0" fillflg="0" backexp="0." backclr="0" offsetx="0." offsety="0."></annInfo>
+                    </geoInfo>
+                    <labelExpression></labelExpression>
+                    <geomType>pnt</geomType>
+                    <priority>1</priority>
+                    <isLabelClientOutside>false</isLabelClientOutside>
+                    <backType>1</backType>
+                    <highlightClr>0</highlightClr>
+                    <backGeoInfo>
+                        <linInfo lib="0" id="1" ovprnt="0" outpenw="5.000000074505806e-002;5.000000074505806e-002;5.000000074505806e-002" outclr="9;4;3" headtype="0" jointype="0" adjustflg="0" makemethod="0" xscale="10." yscale="10."></linInfo>
+                    </backGeoInfo>
+                    <numericPrecision>0</numericPrecision>
+                    <isNewLineToLabel>false</isNewLineToLabel>
+                    <maxLengthPreLine>0</maxLengthPreLine>
+                    <isLabelUnPlaced>false</isLabelUnPlaced>
+                    <reducedSizeForContinulLabel>0</reducedSizeForContinulLabel>
+                    <isHighlightLabelUnPlaced>false</isHighlightLabelUnPlaced>
+                    <labelFormat></labelFormat>
+                    <placeInfo type="1" offset="0." eightLocationPrioritys="1;2;3;4;5;6;7;8" anyLocationCount="1" anyLocationPrioritys="0." isAvoidPointSymbol="0" isFollowPointSymbolBorder="0"></placeInfo>
+                </label>
+                <LayerControl LayerNo="0">
+                    <LayerState></LayerState>
+                </LayerControl>
+                <Extend></Extend>
+            </subnode>
+            <subnode name="其他草地" type="SFeatureLayer" geometryType="3" class="CreateGLayer@GisCartoPrj.dll" LayerClassCode="0">
+                <url>gdbp://MapGisLocal/one_map01/ds/base_map/sfcls/其他草地</url>
+                <layerWeight>0</layerWeight>
+                <IsSnaped>1</IsSnaped>
+                <state>VISIBLE</state>
+                <minScale>0.</minScale>
+                <maxScale>0.</maxScale>
+                <directIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></directIndex>
+                <reverseIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></reverseIndex>
+                <conditions>0000000000000000000000000000000000</conditions>
+                <CustomLayerRenderInfo dllName="" className="" renderName="" descript="" midWareType="0" dataType="0" param="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"></CustomLayerRenderInfo>
+                <vectorRenderInfo sCoordDecDigit="-6496"></vectorRenderInfo>
+                <IsDispElementRect>0</IsDispElementRect>
+                <IsSameAs6xNotDraw0Lin>0</IsSameAs6xNotDraw0Lin>
+                <label name="noname" type="SimpleLabel" class="CreateGLabel@GisCartoPrj.dll">
+                    <state>UNVISIBLE</state>
+                    <geomInfoType>5</geomInfoType>
+                    <minScale>0.</minScale>
+                    <maxScale>0.</maxScale>
+                    <geoInfo>
+                        <annInfo height="14." width="14." space="0." fontang="0." strang="0." ifnt="0" chnt="0" ifnx="0" hvpl="0" iclr="0" ovprnt="0" fillflg="0" backexp="0." backclr="0" offsetx="0." offsety="0."></annInfo>
+                    </geoInfo>
+                    <labelExpression></labelExpression>
+                    <geomType>pnt</geomType>
+                    <priority>1</priority>
+                    <isLabelClientOutside>false</isLabelClientOutside>
+                    <backType>1</backType>
+                    <highlightClr>0</highlightClr>
+                    <backGeoInfo>
+                        <linInfo lib="0" id="1" ovprnt="0" outpenw="5.000000074505806e-002;5.000000074505806e-002;5.000000074505806e-002" outclr="9;4;3" headtype="0" jointype="0" adjustflg="0" makemethod="0" xscale="10." yscale="10."></linInfo>
+                    </backGeoInfo>
+                    <numericPrecision>0</numericPrecision>
+                    <isNewLineToLabel>false</isNewLineToLabel>
+                    <maxLengthPreLine>0</maxLengthPreLine>
+                    <isLabelUnPlaced>false</isLabelUnPlaced>
+                    <reducedSizeForContinulLabel>0</reducedSizeForContinulLabel>
+                    <isHighlightLabelUnPlaced>false</isHighlightLabelUnPlaced>
+                    <labelFormat></labelFormat>
+                    <placeInfo type="1" offset="0." eightLocationPrioritys="1;2;3;4;5;6;7;8" anyLocationCount="1" anyLocationPrioritys="0." isAvoidPointSymbol="0" isFollowPointSymbolBorder="0"></placeInfo>
+                </label>
+                <LayerControl LayerNo="0">
+                    <LayerState></LayerState>
+                </LayerControl>
+                <Extend></Extend>
+            </subnode>
+            <subnode name="其他林地" type="SFeatureLayer" geometryType="3" class="CreateGLayer@GisCartoPrj.dll" LayerClassCode="0">
+                <url>gdbp://MapGisLocal/one_map01/ds/base_map/sfcls/其他林地</url>
+                <layerWeight>0</layerWeight>
+                <IsSnaped>1</IsSnaped>
+                <state>VISIBLE</state>
+                <minScale>0.</minScale>
+                <maxScale>0.</maxScale>
+                <directIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></directIndex>
+                <reverseIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></reverseIndex>
+                <conditions>0000000000000000000000000000000000</conditions>
+                <CustomLayerRenderInfo dllName="" className="" renderName="" descript="" midWareType="0" dataType="0" param="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"></CustomLayerRenderInfo>
+                <vectorRenderInfo sCoordDecDigit="-32768"></vectorRenderInfo>
+                <IsDispElementRect>0</IsDispElementRect>
+                <IsSameAs6xNotDraw0Lin>0</IsSameAs6xNotDraw0Lin>
+                <label name="noname" type="SimpleLabel" class="CreateGLabel@GisCartoPrj.dll">
+                    <state>UNVISIBLE</state>
+                    <geomInfoType>5</geomInfoType>
+                    <minScale>0.</minScale>
+                    <maxScale>0.</maxScale>
+                    <geoInfo>
+                        <annInfo height="14." width="14." space="0." fontang="0." strang="0." ifnt="0" chnt="0" ifnx="0" hvpl="0" iclr="0" ovprnt="0" fillflg="0" backexp="0." backclr="0" offsetx="0." offsety="0."></annInfo>
+                    </geoInfo>
+                    <labelExpression></labelExpression>
+                    <geomType>pnt</geomType>
+                    <priority>1</priority>
+                    <isLabelClientOutside>false</isLabelClientOutside>
+                    <backType>1</backType>
+                    <highlightClr>0</highlightClr>
+                    <backGeoInfo>
+                        <linInfo lib="0" id="1" ovprnt="0" outpenw="5.000000074505806e-002;5.000000074505806e-002;5.000000074505806e-002" outclr="9;4;3" headtype="0" jointype="0" adjustflg="0" makemethod="0" xscale="10." yscale="10."></linInfo>
+                    </backGeoInfo>
+                    <numericPrecision>0</numericPrecision>
+                    <isNewLineToLabel>false</isNewLineToLabel>
+                    <maxLengthPreLine>0</maxLengthPreLine>
+                    <isLabelUnPlaced>false</isLabelUnPlaced>
+                    <reducedSizeForContinulLabel>0</reducedSizeForContinulLabel>
+                    <isHighlightLabelUnPlaced>false</isHighlightLabelUnPlaced>
+                    <labelFormat></labelFormat>
+                    <placeInfo type="1" offset="0." eightLocationPrioritys="1;2;3;4;5;6;7;8" anyLocationCount="1" anyLocationPrioritys="0." isAvoidPointSymbol="0" isFollowPointSymbolBorder="0"></placeInfo>
+                </label>
+                <LayerControl LayerNo="0">
+                    <LayerState></LayerState>
+                </LayerControl>
+                <Extend></Extend>
+            </subnode>
+            <subnode name="水浇地" type="SFeatureLayer" geometryType="3" class="CreateGLayer@GisCartoPrj.dll" LayerClassCode="0">
+                <url>gdbp://MapGisLocal/one_map01/ds/base_map/sfcls/水浇地</url>
+                <layerWeight>0</layerWeight>
+                <IsSnaped>1</IsSnaped>
+                <state>VISIBLE</state>
+                <minScale>0.</minScale>
+                <maxScale>0.</maxScale>
+                <directIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></directIndex>
+                <reverseIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></reverseIndex>
+                <conditions>0000000000000000000000000000000000</conditions>
+                <CustomLayerRenderInfo dllName="" className="" renderName="" descript="" midWareType="0" dataType="0" param="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"></CustomLayerRenderInfo>
+                <vectorRenderInfo sCoordDecDigit="80"></vectorRenderInfo>
+                <IsDispElementRect>0</IsDispElementRect>
+                <IsSameAs6xNotDraw0Lin>0</IsSameAs6xNotDraw0Lin>
+                <label name="noname" type="SimpleLabel" class="CreateGLabel@GisCartoPrj.dll">
+                    <state>UNVISIBLE</state>
+                    <geomInfoType>5</geomInfoType>
+                    <minScale>0.</minScale>
+                    <maxScale>0.</maxScale>
+                    <geoInfo>
+                        <annInfo height="14." width="14." space="0." fontang="0." strang="0." ifnt="0" chnt="0" ifnx="0" hvpl="0" iclr="0" ovprnt="0" fillflg="0" backexp="0." backclr="0" offsetx="0." offsety="0."></annInfo>
+                    </geoInfo>
+                    <labelExpression></labelExpression>
+                    <geomType>pnt</geomType>
+                    <priority>1</priority>
+                    <isLabelClientOutside>false</isLabelClientOutside>
+                    <backType>1</backType>
+                    <highlightClr>0</highlightClr>
+                    <backGeoInfo>
+                        <linInfo lib="0" id="1" ovprnt="0" outpenw="5.000000074505806e-002;5.000000074505806e-002;5.000000074505806e-002" outclr="9;4;3" headtype="0" jointype="0" adjustflg="0" makemethod="0" xscale="10." yscale="10."></linInfo>
+                    </backGeoInfo>
+                    <numericPrecision>0</numericPrecision>
+                    <isNewLineToLabel>false</isNewLineToLabel>
+                    <maxLengthPreLine>0</maxLengthPreLine>
+                    <isLabelUnPlaced>false</isLabelUnPlaced>
+                    <reducedSizeForContinulLabel>0</reducedSizeForContinulLabel>
+                    <isHighlightLabelUnPlaced>false</isHighlightLabelUnPlaced>
+                    <labelFormat></labelFormat>
+                    <placeInfo type="1" offset="0." eightLocationPrioritys="1;2;3;4;5;6;7;8" anyLocationCount="1" anyLocationPrioritys="0." isAvoidPointSymbol="0" isFollowPointSymbolBorder="0"></placeInfo>
+                </label>
+                <LayerControl LayerNo="0">
+                    <LayerState></LayerState>
+                </LayerControl>
+                <Extend></Extend>
+            </subnode>
+            <subnode name="有林地" type="SFeatureLayer" geometryType="3" class="CreateGLayer@GisCartoPrj.dll" LayerClassCode="0">
+                <url>gdbp://MapGisLocal/one_map01/ds/base_map/sfcls/有林地</url>
+                <layerWeight>0</layerWeight>
+                <IsSnaped>1</IsSnaped>
+                <state>VISIBLE</state>
+                <minScale>0.</minScale>
+                <maxScale>0.</maxScale>
+                <directIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></directIndex>
+                <reverseIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></reverseIndex>
+                <conditions>0000000000000000000000000000000000</conditions>
+                <CustomLayerRenderInfo dllName="" className="" renderName="" descript="" midWareType="0" dataType="0" param="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"></CustomLayerRenderInfo>
+                <vectorRenderInfo sCoordDecDigit="-32768"></vectorRenderInfo>
+                <IsDispElementRect>0</IsDispElementRect>
+                <IsSameAs6xNotDraw0Lin>0</IsSameAs6xNotDraw0Lin>
+                <label name="noname" type="SimpleLabel" class="CreateGLabel@GisCartoPrj.dll">
+                    <state>UNVISIBLE</state>
+                    <geomInfoType>5</geomInfoType>
+                    <minScale>0.</minScale>
+                    <maxScale>0.</maxScale>
+                    <geoInfo>
+                        <annInfo height="14." width="14." space="0." fontang="0." strang="0." ifnt="0" chnt="0" ifnx="0" hvpl="0" iclr="0" ovprnt="0" fillflg="0" backexp="0." backclr="0" offsetx="0." offsety="0."></annInfo>
+                    </geoInfo>
+                    <labelExpression></labelExpression>
+                    <geomType>pnt</geomType>
+                    <priority>1</priority>
+                    <isLabelClientOutside>false</isLabelClientOutside>
+                    <backType>1</backType>
+                    <highlightClr>0</highlightClr>
+                    <backGeoInfo>
+                        <linInfo lib="0" id="1" ovprnt="0" outpenw="5.000000074505806e-002;5.000000074505806e-002;5.000000074505806e-002" outclr="9;4;3" headtype="0" jointype="0" adjustflg="0" makemethod="0" xscale="10." yscale="10."></linInfo>
+                    </backGeoInfo>
+                    <numericPrecision>0</numericPrecision>
+                    <isNewLineToLabel>false</isNewLineToLabel>
+                    <maxLengthPreLine>0</maxLengthPreLine>
+                    <isLabelUnPlaced>false</isLabelUnPlaced>
+                    <reducedSizeForContinulLabel>0</reducedSizeForContinulLabel>
+                    <isHighlightLabelUnPlaced>false</isHighlightLabelUnPlaced>
+                    <labelFormat></labelFormat>
+                    <placeInfo type="1" offset="0." eightLocationPrioritys="1;2;3;4;5;6;7;8" anyLocationCount="1" anyLocationPrioritys="0." isAvoidPointSymbol="0" isFollowPointSymbolBorder="0"></placeInfo>
+                </label>
+                <LayerControl LayerNo="0">
+                    <LayerState></LayerState>
+                </LayerControl>
+                <Extend></Extend>
+            </subnode>
+            <subnode name="沟渠_line" type="SFeatureLayer" geometryType="2" class="CreateGLayer@GisCartoPrj.dll" LayerClassCode="0">
+                <url>gdbp://MapGisLocal/one_map01/ds/base_map/sfcls/沟渠_line</url>
+                <layerWeight>0</layerWeight>
+                <IsSnaped>1</IsSnaped>
+                <state>VISIBLE</state>
+                <minScale>0.</minScale>
+                <maxScale>0.</maxScale>
+                <directIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></directIndex>
+                <reverseIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></reverseIndex>
+                <conditions>0000000000000000000000000000000000</conditions>
+                <CustomLayerRenderInfo dllName="" className="" renderName="" descript="" midWareType="0" dataType="0" param="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"></CustomLayerRenderInfo>
+                <vectorRenderInfo sCoordDecDigit="16721"></vectorRenderInfo>
+                <IsDispElementRect>0</IsDispElementRect>
+                <IsSameAs6xNotDraw0Lin>0</IsSameAs6xNotDraw0Lin>
+                <label name="noname" type="SimpleLabel" class="CreateGLabel@GisCartoPrj.dll">
+                    <state>UNVISIBLE</state>
+                    <geomInfoType>5</geomInfoType>
+                    <minScale>0.</minScale>
+                    <maxScale>0.</maxScale>
+                    <geoInfo>
+                        <annInfo height="14." width="14." space="0." fontang="0." strang="0." ifnt="0" chnt="0" ifnx="0" hvpl="0" iclr="0" ovprnt="0" fillflg="0" backexp="0." backclr="0" offsetx="0." offsety="0."></annInfo>
+                    </geoInfo>
+                    <labelExpression></labelExpression>
+                    <geomType>pnt</geomType>
+                    <priority>1</priority>
+                    <isLabelClientOutside>false</isLabelClientOutside>
+                    <backType>1</backType>
+                    <highlightClr>0</highlightClr>
+                    <backGeoInfo>
+                        <linInfo lib="0" id="1" ovprnt="0" outpenw="5.000000074505806e-002;5.000000074505806e-002;5.000000074505806e-002" outclr="9;4;3" headtype="0" jointype="0" adjustflg="0" makemethod="0" xscale="10." yscale="10."></linInfo>
+                    </backGeoInfo>
+                    <numericPrecision>0</numericPrecision>
+                    <isNewLineToLabel>false</isNewLineToLabel>
+                    <maxLengthPreLine>0</maxLengthPreLine>
+                    <isLabelUnPlaced>false</isLabelUnPlaced>
+                    <reducedSizeForContinulLabel>0</reducedSizeForContinulLabel>
+                    <isHighlightLabelUnPlaced>false</isHighlightLabelUnPlaced>
+                    <labelFormat></labelFormat>
+                    <placeInfo type="1" offset="0." eightLocationPrioritys="1;2;3;4;5;6;7;8" anyLocationCount="1" anyLocationPrioritys="0." isAvoidPointSymbol="0" isFollowPointSymbolBorder="0"></placeInfo>
+                </label>
+                <LayerControl LayerNo="0">
+                    <LayerState></LayerState>
+                </LayerControl>
+                <Extend></Extend>
+            </subnode>
+            <subnode name="河流水面_line" type="SFeatureLayer" geometryType="2" class="CreateGLayer@GisCartoPrj.dll" LayerClassCode="0">
+                <url>gdbp://MapGisLocal/one_map01/ds/base_map/sfcls/河流水面_line</url>
+                <layerWeight>0</layerWeight>
+                <IsSnaped>1</IsSnaped>
+                <state>VISIBLE</state>
+                <minScale>0.</minScale>
+                <maxScale>0.</maxScale>
+                <directIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></directIndex>
+                <reverseIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></reverseIndex>
+                <conditions>0000000000000000000000000000000000</conditions>
+                <CustomLayerRenderInfo dllName="" className="" renderName="" descript="" midWareType="0" dataType="0" param="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"></CustomLayerRenderInfo>
+                <vectorRenderInfo sCoordDecDigit="16721"></vectorRenderInfo>
+                <IsDispElementRect>0</IsDispElementRect>
+                <IsSameAs6xNotDraw0Lin>0</IsSameAs6xNotDraw0Lin>
+                <label name="noname" type="SimpleLabel" class="CreateGLabel@GisCartoPrj.dll">
+                    <state>UNVISIBLE</state>
+                    <geomInfoType>5</geomInfoType>
+                    <minScale>0.</minScale>
+                    <maxScale>0.</maxScale>
+                    <geoInfo>
+                        <annInfo height="14." width="14." space="0." fontang="0." strang="0." ifnt="0" chnt="0" ifnx="0" hvpl="0" iclr="0" ovprnt="0" fillflg="0" backexp="0." backclr="0" offsetx="0." offsety="0."></annInfo>
+                    </geoInfo>
+                    <labelExpression></labelExpression>
+                    <geomType>pnt</geomType>
+                    <priority>1</priority>
+                    <isLabelClientOutside>false</isLabelClientOutside>
+                    <backType>1</backType>
+                    <highlightClr>0</highlightClr>
+                    <backGeoInfo>
+                        <linInfo lib="0" id="1" ovprnt="0" outpenw="5.000000074505806e-002;5.000000074505806e-002;5.000000074505806e-002" outclr="9;4;3" headtype="0" jointype="0" adjustflg="0" makemethod="0" xscale="10." yscale="10."></linInfo>
+                    </backGeoInfo>
+                    <numericPrecision>0</numericPrecision>
+                    <isNewLineToLabel>false</isNewLineToLabel>
+                    <maxLengthPreLine>0</maxLengthPreLine>
+                    <isLabelUnPlaced>false</isLabelUnPlaced>
+                    <reducedSizeForContinulLabel>0</reducedSizeForContinulLabel>
+                    <isHighlightLabelUnPlaced>false</isHighlightLabelUnPlaced>
+                    <labelFormat></labelFormat>
+                    <placeInfo type="1" offset="0." eightLocationPrioritys="1;2;3;4;5;6;7;8" anyLocationCount="1" anyLocationPrioritys="0." isAvoidPointSymbol="0" isFollowPointSymbolBorder="0"></placeInfo>
+                </label>
+                <LayerControl LayerNo="0">
+                    <LayerState></LayerState>
+                </LayerControl>
+                <Extend></Extend>
+            </subnode>
+            <subnode name="农村道路_line" type="SFeatureLayer" geometryType="2" class="CreateGLayer@GisCartoPrj.dll" LayerClassCode="0">
+                <url>gdbp://MapGisLocal/one_map01/ds/base_map/sfcls/农村道路_line</url>
+                <layerWeight>0</layerWeight>
+                <IsSnaped>1</IsSnaped>
+                <state>VISIBLE</state>
+                <minScale>0.</minScale>
+                <maxScale>0.</maxScale>
+                <directIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></directIndex>
+                <reverseIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></reverseIndex>
+                <conditions>0000000000000000000000000000000000</conditions>
+                <CustomLayerRenderInfo dllName="" className="" renderName="" descript="" midWareType="0" dataType="0" param="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"></CustomLayerRenderInfo>
+                <IsDispElementRect>0</IsDispElementRect>
+                <IsSameAs6xNotDraw0Lin>0</IsSameAs6xNotDraw0Lin>
+                <label name="noname" type="SimpleLabel" class="CreateGLabel@GisCartoPrj.dll">
+                    <state>UNVISIBLE</state>
+                    <geomInfoType>5</geomInfoType>
+                    <minScale>0.</minScale>
+                    <maxScale>0.</maxScale>
+                    <geoInfo>
+                        <annInfo height="14." width="14." space="0." fontang="0." strang="0." ifnt="0" chnt="0" ifnx="0" hvpl="0" iclr="0" ovprnt="0" fillflg="0" backexp="0." backclr="0" offsetx="0." offsety="0."></annInfo>
+                    </geoInfo>
+                    <labelExpression></labelExpression>
+                    <geomType>pnt</geomType>
+                    <priority>1</priority>
+                    <isLabelClientOutside>false</isLabelClientOutside>
+                    <backType>1</backType>
+                    <highlightClr>0</highlightClr>
+                    <backGeoInfo>
+                        <linInfo lib="0" id="1" ovprnt="0" outpenw="5.000000074505806e-002;5.000000074505806e-002;5.000000074505806e-002" outclr="9;4;3" headtype="0" jointype="0" adjustflg="0" makemethod="0" xscale="10." yscale="10."></linInfo>
+                    </backGeoInfo>
+                    <numericPrecision>0</numericPrecision>
+                    <isNewLineToLabel>false</isNewLineToLabel>
+                    <maxLengthPreLine>0</maxLengthPreLine>
+                    <isLabelUnPlaced>false</isLabelUnPlaced>
+                    <reducedSizeForContinulLabel>0</reducedSizeForContinulLabel>
+                    <isHighlightLabelUnPlaced>false</isHighlightLabelUnPlaced>
+                    <labelFormat></labelFormat>
+                    <placeInfo type="1" offset="0." eightLocationPrioritys="1;2;3;4;5;6;7;8" anyLocationCount="1" anyLocationPrioritys="0." isAvoidPointSymbol="0" isFollowPointSymbolBorder="0"></placeInfo>
+                </label>
+                <LayerControl LayerNo="0">
+                    <LayerState></LayerState>
+                </LayerControl>
+                <Extend></Extend>
+            </subnode>
+            <subnode name="田坎_line" type="SFeatureLayer" geometryType="2" class="CreateGLayer@GisCartoPrj.dll" LayerClassCode="0">
+                <url>gdbp://MapGisLocal/one_map01/ds/base_map/sfcls/田坎_line</url>
+                <layerWeight>0</layerWeight>
+                <IsSnaped>1</IsSnaped>
+                <state>VISIBLE</state>
+                <minScale>0.</minScale>
+                <maxScale>0.</maxScale>
+                <directIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></directIndex>
+                <reverseIndex transname="" InCord="0" InUnit="0" OutCord="0" OutUnit="0" type="0" lenunit="0" angunit="0" dx="0." dy="0." dz="0." wx="0." wy="0." wz="0." dm="0." ds2="0." dA2="0." df2="0." res1="0." res2="0." szEquationX="" szEquationY="" szEquationZ=""></reverseIndex>
+                <conditions>0000000000000000000000000000000000</conditions>
+                <CustomLayerRenderInfo dllName="" className="" renderName="" descript="" midWareType="0" dataType="0" param="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"></CustomLayerRenderInfo>
+                <vectorRenderInfo sCoordDecDigit="231"></vectorRenderInfo>
+                <IsDispElementRect>0</IsDispElementRect>
+                <IsSameAs6xNotDraw0Lin>0</IsSameAs6xNotDraw0Lin>
+                <label name="noname" type="SimpleLabel" class="CreateGLabel@GisCartoPrj.dll">
+                    <state>UNVISIBLE</state>
+                    <geomInfoType>5</geomInfoType>
+                    <minScale>0.</minScale>
+                    <maxScale>0.</maxScale>
+                    <geoInfo>
+                        <annInfo height="14." width="14." space="0." fontang="0." strang="0." ifnt="0" chnt="0" ifnx="0" hvpl="0" iclr="0" ovprnt="0" fillflg="0" backexp="0." backclr="0" offsetx="0." offsety="0."></annInfo>
+                    </geoInfo>
+                    <labelExpression></labelExpression>
+                    <geomType>pnt</geomType>
+                    <priority>1</priority>
+                    <isLabelClientOutside>false</isLabelClientOutside>
+                    <backType>1</backType>
+                    <highlightClr>0</highlightClr>
+                    <backGeoInfo>
+                        <linInfo lib="0" id="1" ovprnt="0" outpenw="5.000000074505806e-002;5.000000074505806e-002;5.000000074505806e-002" outclr="9;4;3" headtype="0" jointype="0" adjustflg="0" makemethod="0" xscale="10." yscale="10."></linInfo>
+                    </backGeoInfo>
+                    <numericPrecision>0</numericPrecision>
+                    <isNewLineToLabel>false</isNewLineToLabel>
+                    <maxLengthPreLine>0</maxLengthPreLine>
+                    <isLabelUnPlaced>false</isLabelUnPlaced>
+                    <reducedSizeForContinulLabel>0</reducedSizeForContinulLabel>
+                    <isHighlightLabelUnPlaced>false</isHighlightLabelUnPlaced>
+                    <labelFormat></labelFormat>
+                    <placeInfo type="1" offset="0." eightLocationPrioritys="1;2;3;4;5;6;7;8" anyLocationCount="1" anyLocationPrioritys="0." isAvoidPointSymbol="0" isFollowPointSymbolBorder="0"></placeInfo>
+                </label>
+                <LayerControl LayerNo="0">
+                    <LayerState></LayerState>
+                </LayerControl>
+                <Extend></Extend>
+            </subnode>
+            <bookMarks></bookMarks>
+            <Extend>
+                <Expand>true</Expand>
+                <InitOpenView>True</InitOpenView>
+            </Extend>
+            <GraphicsData dispos="0">
+                <Graphics_ann>R0RCRFVNUEYBAAEAAAAAAAUAAAAkAAAANDQyZmFmMmEtNzVmNC00ZDEyLTgwNTQtMWZiMjhkZjliOTA3BgAAAAQAAAAAAAAAUAAAAAAAAAAAAQAAAAAAAIgBAAAAAAAAAgAAAAAAAAD/////////////////////AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqpmZmZmZuX+qmZmZmZm5f6qZmZmZmbn/qpmZmZmZuf8AAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAckThBwceAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgBQAAAQAAAAAAAAD/////gAEAAAAAAADABQAAAAAAAAAAAAAAAAAAcEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIAQAAAAAAAAAAAgAAAAAAAAD/////////////////////</Graphics_ann>
+                <Graphics_Pnt>R0RCRFVNUEYBAAEAAAAAAAEAAAAkAAAAMWY2NzY3OWMtMzk4NC00MTU4LTk5NzEtYTg5ZGE1MmZjY2RhDAAAAAQAAAAAAAAAQAAAAAAAAAA4AAAAAAAAAP//////////AAAAAAAAAABYAAAAAAAAAP//////////////////////////////////////////iAEAAAAAAAACAAAAAAAAAP//////////AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAACqmZmZmZm5f6qZmZmZmbl/qpmZmZmZuf+qmZmZmZm5/wAAAAAAAWUAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgAAAAAAAAA//////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAIEEAACBBAAAAAM3MTD3NzEw9zcxMPQUAAAAEAAAAAwAAAAABAACAPwEAAABYAAAAAAAAAP//////////////////////////////////////////ckThBwceAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgBQAAAQAAAAAAAAD/////gAEAAAAAAADABQAAAAAAAAAAAAAAAAAAcEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIAQAAAAAAAAAAAgAAAAAAAAD//////////w==</Graphics_Pnt>
+                <Graphics_Lin>R0RCRFVNUEYBAAEAAAAAAAIAAAAkAAAANmRkMDc5ZTctZWIwNC00NzFkLWFiMWMtMDhmNWE0MjhiOTZmDAAAAAQAAAAAAAAAQAAAAAAAAAA4AAAAAAAAAP///////////////////////////////wAAAAAAAAAATwAAAAAAAAD/////////////////////iAEAAAAAAAACAAAAAAAAAP//////////AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAACqmZmZmZm5f6qZmZmZmbl/qpmZmZmZuf+qmZmZmZm5/wAAAAAAAWUAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgAAAAAAAAA////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAzcxMPc3MTD3NzEw9AQAAAAQAAAADAAAAAAAAAAAAIEEAACBBTwAAAAAAAAD/////////////////////ckThBwceAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgBQAAAQAAAAAAAAD/////gAEAAAAAAADABQAAAAAAAAAAAAAAAAAAcEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIAQAAAAAAAAAAAgAAAAAAAAD//////////w==</Graphics_Lin>
+                <Graphics_Reg>R0RCRFVNUEYBAAEAAAAAAAMAAAAkAAAAOWNiMzJiZDYtOWFmOC00ZTY2LWJlYWYtZGRmNzY2Mzg3OTBlDAAAAAQAAAAAAAAAQAAAAAAAAAA4AAAAAAAAAP////////////////////////////////////////////////////8AAAAAAAAAAEoAAAAAAAAAiAEAAAAAAAACAAAAAAAAAP//////////AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAACqmZmZmZm5f6qZmZmZmbl/qpmZmZmZuf+qmZmZmZm5/wAAAAAAAWUAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgAAAAAAAAA/////////////////////////////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAABQAAAAAAAAAAAKBAAACgQAAAAAADAAAAAACAPwFKAAAAAAAAAHJE4QcHHgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AUAAAEAAAAAAAAA/////4ABAAAAAAAAwAUAAAAAAAAAAAAAAAAAAHBEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAEAAAAAAAAAAAIAAAAAAAAA//////////8=</Graphics_Reg>
+                <state>VISIBLE</state>
+                <systemLibraryGUID>00000000-0000-0000-0000-000000000000</systemLibraryGUID>
+            </GraphicsData>
+        </subnode>
+        <layout class="CreateLayOut@GisCartoPrj.dll">
+            <height>841.000000</height>
+            <width>594.000000</width>
+            <elements>
+                <element bFixAspect="0" bCanScale="1" bCanRotate="0" sysLibGuid="00000000-0000-0000-0000-000000000000" DynamicGridVisible="0" type="MapElement" class="CreateGElement@GisCartoPrj.dll" MapName="赵大把营子村" MapGuid="e547da4b-f973-45fd-8d96-448a3246587b">
+                    <MapElementCustiomViewExtent>
+                        <xmin>0.</xmin>
+                        <ymin>0.</ymin>
+                        <xmax>0.</xmax>
+                        <ymax>0.</ymax>
+                    </MapElementCustiomViewExtent>
+                    <Extend></Extend>
+                    <border visible="0" xGrap="0." yGrap="0." BorderType="0">
+                        <SimpleBorderInfo cornerRounding="0" FillType="0" lib="0" id="1" ovprnt="0" outpenw="5.000000074505806e-002;0.;0." outclr="0;0;0" headtype="0" jointype="0" adjustflg="0" makemethod="0" xscale="10." yscale="10."></SimpleBorderInfo>
+                        <LaceBorderInfo>
+                            <corners>
+                                <cornerLB dx="0." dy="0." lib="0" id="0" height="5" width="5" angle="0" outpenw="0;0;0" outclr="0;0;0" ovprnt="0" fillflg="0" backexp="0" backclr="0"></cornerLB>
+                                <cornerRB dx="0." dy="0." lib="0" id="0" height="5" width="5" angle="0" outpenw="0;0;0" outclr="0;0;0" ovprnt="0" fillflg="0" backexp="0" backclr="0"></cornerRB>
+                                <cornerRT dx="0." dy="0." lib="0" id="0" height="5" width="5" angle="0" outpenw="0;0;0" outclr="0;0;0" ovprnt="0" fillflg="0" backexp="0" backclr="0"></cornerRT>
+                                <cornerLT dx="0." dy="0." lib="0" id="0" height="5" width="5" angle="0" outpenw="0;0;0" outclr="0;0;0" ovprnt="0" fillflg="0" backexp="0" backclr="0"></cornerLT>
+                            </corners>
+                            <borders adjustmode="0">
+                                <borderleft gap="0."></borderleft>
+                                <borderright gap="0."></borderright>
+                                <bordertop gap="0."></bordertop>
+                                <borderbottom gap="0."></borderbottom>
+                                <borderclose gap="0."></borderclose>
+                            </borders>
+                            <lines></lines>
+                            <draworder>0</draworder>
+                        </LaceBorderInfo>
+                    </border>
+                    <background visible="0" cornerRounding="0" xGrap="0." yGrap="0.">
+                        <info lib="0" id="0" ovprnt="0" fillmode="0" fillclr="0" endclr="0" pathei="0." patwid="0." ang="0." patclr="0" outpenw="0." fullpatflg="0"></info>
+                    </background>
+                    <shadow visible="0" cornerRounding="0" xGrap="0." yGrap="0.">
+                        <info lib="0" id="0" ovprnt="0" fillmode="0" fillclr="0" endclr="0" pathei="0." patwid="0." ang="0." patclr="0" outpenw="0." fullpatflg="0"></info>
+                    </shadow>
+                    <LogicRect xmin="0." ymin="0." xmax="594." ymax="841."></LogicRect>
+                    <viewRect xmin="0." ymin="0." xmax="0." ymax="0."></viewRect>
+                </element>
+            </elements>
+            <bookMarks></bookMarks>
+            <Extend></Extend>
+        </layout>
+        <Extend></Extend>
+    </root>
+</datacenter>

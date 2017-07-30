@@ -170,6 +170,7 @@ define([
           elementType: 2//线网标
       });
       queryParam.execute(function(data) {
+        console.log(data.results[0].Value,flagPointStr);
         if (data.results === null || data.results[0].Value === '') {
           $.messager.alert('警告',"路径分析失败！请检查起点终点位置。");
           return;
@@ -208,18 +209,16 @@ define([
     var $end_select = $('#om-path-anaylse-end-select');
     // 查询LayerFeature
     var queryService = new Zondy.Service.QueryLayerFeature(
-      (function(){
-        return new Zondy.Service.QueryByLayerParameter(
-          OM_CONFIG.pathAnalysisAddr, 
-          { 
-            resultFormat: "json",
-            struct: (function(){
-              return new Zondy.Service.QueryFeatureStruct({IncludeGeometry: true})
-            })(),
-            recordNumber: 10000
-          });
-      })(),
-      { ip: OM_CONFIG.ip, port: OM_CONFIG.prot });
+      new Zondy.Service.QueryByLayerParameter(
+        OM_CONFIG.pathAnalysisAddr, 
+        { 
+          resultFormat: "json",
+          struct: new Zondy.Service.QueryFeatureStruct({IncludeGeometry: true}),
+          recordNumber: 10000
+        }
+      ),
+      { ip: OM_CONFIG.ip, port: OM_CONFIG.prot }
+    );
     // 查询LayerFeature成功，初始化路径分析对话框
     queryService.query(function(data){
       var addr = [];
@@ -237,8 +236,8 @@ define([
         addr_items += '<option>' + data.SFEleArray[i]["AttValue"][1] + '</option>';
         addr[i+1] = {};
         addr[i+1].val = data.SFEleArray[i]["AttValue"][1];
-        addr[i+1].x = data.SFEleArray[i]["bound"]["xmin"];
-        addr[i+1].y = data.SFEleArray[i]["bound"]["ymin"];
+        addr[i+1].x = data.SFEleArray[i]["bound"]["xmin"] + 0.00001;
+        addr[i+1].y = data.SFEleArray[i]["bound"]["ymin"] + 0.000001;
       }
       //弹出路径分析对话框
       $('#om-path-anaylse-window').window().window('open');
