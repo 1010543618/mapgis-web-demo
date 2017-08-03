@@ -10,21 +10,15 @@ define([
   ], function(){
   var om_analysis = {};
   om_analysis.overlay_analysis = function(){
-    console.log(MAP_LAYERS);
     var $oaw = $("#om-overlay_analysis-window")
     // 源图层
     for (var i = 0; i < MAP_LAYERS.subLayerNames.length; i++) {
       $("#om-overlay_analysis-source-layer").append("<option>"+MAP_LAYERS.subLayerNames[i]+"</option>");
     }
     // 叠加图层
-    var mapdoc = new Zondy.Service.Catalog.MapDoc({ docName: OM_CONFIG.areaMapName, ip: OM_CONFIG.ip, port: OM_CONFIG.port, mapIndex: 0 });
-    window.ZD_S_C_MAPDOC.getMapInfo(function(layers){
-      for (var i = 0; i < layers.subLayerNames.length; i++) {
-        $("#om-overlay_analysis-overlay-layer").append("<option>"+layers.subLayerNames[i]+"</option>");
-      }
-    }, true, true);
+    $("#om-overlay_analysis-overlay-layer").append("<option>test1</option><option>test2</option><option>test3</option>");
     // 结果路径
-    $oaw.find("input[name='desInfo_path']").val(OM_CONFIG.overlaySourceSet);
+    $oaw.find("input[name='desInfo_path']").val(OM_CONFIG.anaResultSet);
     $oaw.window().window('open');
     $('#om-startOverlayAnaylse').click(function(){
       $('#om-startOverlayAnaylse').text('正在分析。。。').css('cursor', 'wait').attr('disabled', true);
@@ -36,8 +30,8 @@ define([
       if (anaylse_option.desInfo_name == '') {
         anaylse_option.desInfo_name = anaylse_option.srcInfo1 + '_' +  anaylse_option.srcInfo2;
       }
-      anaylse_option.srcInfo1 = OM_CONFIG.bufferSourceSet + anaylse_option.srcInfo1;
-      anaylse_option.srcInfo2 = OM_CONFIG.bufferSourceSet + anaylse_option.srcInfo2;
+      anaylse_option.srcInfo1 = OM_CONFIG.baseMapSet + anaylse_option.srcInfo1;
+      anaylse_option.srcInfo2 = OM_CONFIG.appAreaSet + anaylse_option.srcInfo2;
       anaylse_option.desInfo = anaylse_option.desInfo_path+anaylse_option.desInfo_name;
       anaylse_option.ip = OM_CONFIG.ip;
       var overlayService = new Zondy.Service.OverlayByLayer(anaylse_option);

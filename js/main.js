@@ -66,8 +66,10 @@ requirejs(['om_init'],function () {
         mapBound: new OpenLayers.Bounds(41390938.3458,4666365.89887,41395992.0725,4670722.454756),//范围
         pathAnalysisUrl: "gdbp://MapGisLocal/" + mapSqlName + "/ds/base_map/ncls/道路网",//路径分析Url
         pathAnalysisAddr: "gdbp://MapGisLocal/" + mapSqlName + "/ds/base_map/sfcls/地址点", //路径分析地址点
+        baseMapSet: "gdbp://MapGisLocal/" + mapSqlName + "/ds/base_map/sfcls/",
+        appAreaSet: "gdbp://MapGisLocal/" + mapSqlName + "/ds/app_area/sfcls/",
+        anaResultSet: "gdbp://MapGisLocal/" + mapSqlName + "/ds/analysis_results/sfcls/",
         bufferSourceSet: "gdbp://MapGisLocal/" + mapSqlName + "/ds/buffer/sfcls/", //缓冲区分析分析Url
-        overlaySourceSet: "gdbp://MapGisLocal/" + mapSqlName + "/ds/overlay/sfcls/",//叠加分析Url
         SrcLayer: "gdbp://MapGisLocal/" + mapSqlName + "/ds/gxgl_set/sfcls/", //空间分析Url
         clipSourceSet: "gdbp://MapGisLocal/" + mapSqlName + "/ds/clip/sfcls/"//裁剪分析Url
     };

@@ -282,31 +282,47 @@ define([
       $("#om_map_layer-tree").tree({
         data:[branch1],
         onContextMenu: function(e, node){
+            var this_tree = this;
             e.preventDefault();
             // select the node
             $('#om_map_layer-tree').tree('select', node.target);
             // display context menu
-            $('#om_map_layer-menu').menu({
-                onClick:function(item){
-                    switch(item.text){
-                        case '显示' :
-                            om_layer.layer_show(node);
-                            break;
-                        case '隐藏' :
-                            om_layer.layer_hide(node);
-                            break;
-                        case '查询' :
-                            om_layer.layer_query(node);
-                            break;
-                        case '编辑' :
-                            om_layer.layer_edit(node);
-                            break;
-                        case '查看属性表' :
-                            om_layer.layer_table(node);
-                            break;
+            if (node.text == layers["name"]) {
+                $('#om_map_layer-menu').menu({
+                    onClick:function(item){
+                        switch(item.text){
+                            case '显示' :
+                                om_layer.show_all_layer(this_tree, node);
+                                break;
+                            case '隐藏' :
+                                om_layer.hide_all_layer(this_tree, node);
+                                break;
+                        }
                     }
-                }
-            });
+                });
+            }else{
+                $('#om_map_layer-menu').menu({
+                    onClick:function(item){
+                        switch(item.text){
+                            case '显示' :
+                                om_layer.layer_show(node);
+                                break;
+                            case '隐藏' :
+                                om_layer.layer_hide(node);
+                                break;
+                            case '查询' :
+                                om_layer.layer_query(node);
+                                break;
+                            case '编辑' :
+                                om_layer.layer_edit(node);
+                                break;
+                            case '查看属性表' :
+                                om_layer.layer_table(node);
+                                break;
+                        }
+                    }
+                });
+            }
             $('#om_map_layer-menu').menu('show', {
                 left: e.pageX,
                 top: e.pageY

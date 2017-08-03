@@ -18,7 +18,7 @@ define([
    */
   var om_layer = {};
   om_layer.layer_show = function(node){
-      // if('show' == node.attributes.status) return;
+      if('show' == node.attributes.status) return;
       do_layer_show(node);
   }
   //图层状态隐藏
@@ -52,20 +52,40 @@ define([
       $(node.target).find('.fa').removeClass().addClass('fa fa-table om-layer-icon');
   }
 
-  // om_layer.layerHide = function() {
-  //     if (layer.visibility) {
-  //         layer.visibility = false; //隐藏全部图层 
-  //     }
-  //     om_layer.refresh();
-  // }
-  // //设置图层可见 
-  // om_layer.layerDisplay = function(){
-  //     if (layer.visibility == false) {
-  //         layer.visibility = true; //显示全部图层 
-  //     }
-  //     om_layer.refresh();
-  // }
-  
+  om_layer.show_all_layer = function(this_tree, node){
+    var children = $(this_tree).tree('getNode', node.target).children;
+    var arr = [];
+    for (var i = children.length - 1; i >= 0; i--) {
+      var node = children[i];
+      var layer_index = node.id;
+      claer_query_edit(layer_index);
+      window.MAP_LAYERS['hide_layers'].splice($.inArray(layer_index,window.MAP_LAYERS['hide_layers']),1);
+      node.attributes.status = 'show';
+      arr.push(i);
+    }
+    $(this_tree).find('.fa').removeClass().addClass('fa fa-eye om-layer-icon');
+    window.OM_ZD_MAP_DOC.layers = "include: " + arr.join(',');
+    om_tool.refresh();
+  }
+
+  /**
+  *循环调用do_layer_hide无法隐藏图层
+  *所以先循环再"exclude: " + MAP_LAYERS['hide_layers'].join(',');一起隐藏
+  */
+  om_layer.hide_all_layer = function(this_tree, node){
+    var children = $(this_tree).tree('getNode', node.target).children;
+    for (var i = children.length - 1; i >= 0; i--) {
+      var node = children[i];
+      var layer_index = node.id;
+      claer_query_edit(layer_index);
+      window.MAP_LAYERS['hide_layers'].push(layer_index);
+      node.attributes.status = 'hide';
+    }
+    $(this_tree).find('.fa').removeClass().addClass('fa fa-eye-slash om-layer-icon');
+    window.OM_ZD_MAP_DOC.layers = "exclude: " + MAP_LAYERS['hide_layers'].join(',');
+    om_tool.refresh();
+  }
+
   function do_layer_show(node){
     var layer_index = node.id;
     claer_query_edit(layer_index);
@@ -80,7 +100,7 @@ define([
     var layer_index = node.id;
     claer_query_edit(layer_index);
     window.MAP_LAYERS['hide_layers'].push(layer_index);
-    window.OM_ZD_MAP_DOC.layers = "exclude: " + layer_index;
+    window.OM_ZD_MAP_DOC.layers = 'exclude: ' + layer_index;
     om_tool.refresh();
     node.attributes.status = 'hide';
     $(node.target).find('.fa').removeClass().addClass('fa fa-eye-slash om-layer-icon');
