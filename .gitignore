@@ -1,2 +1,41 @@
 /node_modules/*
 !/node_modules/mapgis
+
+# Tracked files
+## bootstrap
+#git add -f /node_modules/bootstrap/dist/css/bootstrap.min.css
+#git add -f /node_modules/bootstrap/dist/fonts
+#
+## demo-jquery-easyui
+#git add -f /node_modules/demo-jquery-easyui/jquery.easyui.min.js
+#git add -f /node_modules/demo-jquery-easyui/themes/icon.css
+#git add -f /node_modules/demo-jquery-easyui/themes/default/easyui.css
+#git add -f /node_modules/demo-jquery-easyui/themes/default/images
+#
+## demo-jquery-easyui-ribbon
+#git add -f /node_modules/demo-jquery-easyui-ribbon/jquery.ribbon.js
+#git add -f /node_modules/demo-jquery-easyui-ribbon/ribbon.css
+#git add -f /node_modules/demo-jquery-easyui-ribbon/ribbon-icon.css
+#git add -f /node_modules/demo-jquery-easyui-ribbon/images/16
+#git add -f /node_modules/demo-jquery-easyui-ribbon/mapgis-demo/mapgis-ribbon-icon.css
+#git add -f /node_modules/demo-jquery-easyui-ribbon/mapgis-demo/images
+#
+## font-awesome
+#git add -f /node_modules/font-awesome/css/font-awesome.min.css
+#git add -f /node_modules/font-awesome/fonts
+#
+## iziModal
+#git add -f /node_modules/iziModal/css/iziModal.min.css
+#git add -f /node_modules/iziModal/js/iziModal.min.js
+#
+## jquery
+#git add -f /node_modules/jquery/dist/jquery.js
+#
+## jquery-confirm
+#git add -f /node_modules/jquery-confirm/dist/jquery-confirm.min.css
+#
+## requirejs
+#git add -f /node_modules/requirejs/require.js
+#
+## store-js
+#git add -f /node_modules/store-js/dist/store.legacy.min.js
