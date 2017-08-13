@@ -50,6 +50,9 @@ define(['jquery'], function($){
     if (typeof ZD_M_LAYER != 'undefined') {
       ZD_M_LAYER.destroy();
     }
+    if (typeof ZD_M_LAYER != 'undefined') {
+      NET_LAYER.destroy();
+    }
     // 向量图层
     if (typeof OL_L_Vector != 'undefined') {
       OL_L_Vector.destroy();
