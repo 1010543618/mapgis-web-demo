@@ -50,7 +50,7 @@ define(['jquery'], function($){
     if (typeof ZD_M_LAYER != 'undefined') {
       ZD_M_LAYER.destroy();
     }
-    if (typeof ZD_M_LAYER != 'undefined') {
+    if (typeof NET_LAYER != 'undefined') {
       NET_LAYER.destroy();
     }
     // 向量图层
